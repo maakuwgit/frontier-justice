@@ -1,0 +1,92 @@
+/**
+ * ll-location-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-location-grid {
+  @extend %section-padding;
+  background-color: $ivory;
+
+  .location-grid__heading {
+    @extend %h3;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: $text-book;
+    color: $ebony;
+  }
+
+  .location-grid__content {
+
+    p:last-child {
+      margin-bottom: auto;
+    }
+
+  }
+
+  .location-grid__locations {
+    position: relative;
+  }
+
+  .location-grid__location {
+    margin-top: $padding-small;
+
+    a[href^="tel:"] {
+      cursor: initial;
+      color: currentColor;
+    }
+
+  }
+
+  .location-grid__location__title {
+    margin-bottom: rem-calc(10);
+    font-size: rem-calc(16);
+    color: $ebony;
+    line-height: 24px;
+    line-height: 1.33333333333333;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .location-grid__location__address,
+  .location-grid__location__hours,
+  .location-grid__location__phone {
+    font-size: rem-calc(14);
+    font-weight: $text-med;
+    line-height: 22px;
+    line-height: 1.57142857142857;
+  }
+
+  @include screen-sm {
+
+    .location-grid__location__phone {
+      cursor: pointer;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .location-grid__location__address,
+    .location-grid__location__hours,
+    .location-grid__location__phone {
+      font-size: rem-calc(16);
+      line-height: 27px;
+      line-height: 1.6875;
+    }
+
+    .location-grid__location {
+      margin-top: $padding-medium;
+      margin-bottom: $padding-medium;
+    }
+
+    .location-grid__location__title {
+      font-size: rem-calc(18);
+    }
+
+  }
+}

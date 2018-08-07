@@ -1,0 +1,75 @@
+/**
+ * hero Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-hero {
+  position: relative;
+  min-height: 637px;
+  height: 66.6667vh;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 0 !important;
+  text-align: left;
+  background-color: $smoke;
+  @include ragged-after;
+
+  &.big-headline .hero__heading {
+    margin-bottom: rem-calc(195/2);
+    font-size: rem-calc(82);
+    line-height: line-calc(70,82);
+  }
+
+  + .entry__meta {
+   padding-top: $padding-small;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    min-height: inherit;
+  }
+
+  .hero__heading,
+  .hero__supertitle {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    color: $white;
+  }
+
+  .hero__supertitle {
+    @extend %supertitle;
+  }
+
+  .hero__heading {
+    @extend %h0;
+  }
+
+  .play-video-button {
+    @extend %icon-link;
+    margin-top: rem-calc(21);
+  }
+
+  &:after {
+    bottom: 0;
+    border-width: #{rem-calc(75)} 100vw 0 0;
+    border-color: transparent $white transparent transparent;
+  }
+
+  @include screen-md-up {
+
+    &.big-headline .hero__heading {
+      margin-bottom: rem-calc(195);
+    }
+
+    .hero__heading,
+    .hero__supertitle {
+      margin-right: 0;
+    }
+
+  }
+}

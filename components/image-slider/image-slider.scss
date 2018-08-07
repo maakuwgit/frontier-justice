@@ -1,0 +1,94 @@
+/**
+ * image-slider Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-image-slider {
+  position: relative;
+
+  .image-slider__slides {
+    position: relative;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .image-slider__slide {
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      cursor: ew-resize;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+
+  .image-slider__slick-prev,
+  .image-slider__slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: rem-calc(46);
+    min-width: initial;
+    height: rem-calc(46);
+    border-radius: 200px;
+    border: none;
+    padding: rem-calc(10);
+    font-size: rem-calc(10);
+    text-shadow: #{rem-calc(1)} #{rem-calc(1)} #{rem-calc(1)} rgba($black, 0.16);
+    line-height: 1.5;
+    background-color: rgba($white, 0.5);
+    box-shadow: inset 0 #{rem-calc(1)} #{rem-calc(3)} 0 rgba($black, 0.16);
+  }
+
+  .image-slider__slick-prev {
+    left: rem-calc(32);
+  }
+
+  .image-slider__slick-next {
+    right: rem-calc(32);
+  }
+}

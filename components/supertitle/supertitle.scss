@@ -1,0 +1,14 @@
+/**
+ * supertitle Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+%supertitle {
+  @extend %h1;
+}
+
+.ll-supertitle {
+  @extend %supertitle;
+}

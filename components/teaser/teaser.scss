@@ -1,0 +1,53 @@
+/**
+ * teaser Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-teaser {
+  @extend %section-padding;
+
+  .teaser__headline {
+    @extend %h3;
+  }
+
+  .teaser__col__title {
+    color: $gold;
+    font-weight: $text-bold;
+  }
+
+  .teaser__col__icon {
+    @extend %coin;
+    margin-bottom: rem-calc(16);
+    background-color: $ivory;
+
+    svg {
+      fill: $gold;
+    }
+  }
+
+  .teaser__body {
+    margin-top: $padding-medium;
+  }
+
+  @include screen-md-only {
+    .teaser__col:nth-of-type(3n+3) {
+      width: 100%;
+      max-width: 100%;
+      margin-top: $padding-small;
+    }
+  }
+
+  @include screen-md-up {
+    .teaser__body {
+      margin-top: $padding-large;
+    }
+
+    .teaser__description {
+      max-width: 85%;
+    }
+  }
+
+}

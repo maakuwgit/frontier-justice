@@ -1,0 +1,102 @@
+/**
+ * two-col-w-icons Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-two-col-w-icons {
+  @extend %section-padding;
+
+  .two-col-w-icons__item__title {
+    color: $ebony;
+  }
+
+  .two-col-w-icons__item__caption {
+    margin-top: 0;
+  }
+
+  .two-col-w-icons__content {
+
+    ul {
+      margin-top: $padding-xsmall;
+    }
+
+    li {
+      margin-bottom: rem-calc(10);
+      font-size: rem-calc(16);
+      font-weight: $text-bold;
+      line-height: 20px;
+      line-height: 1.25;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    a:not(.btn) {
+      color: $gold;
+
+      &:hover {
+        color: $smoke;
+      }
+    }
+  }
+
+  .two-col-w-icons__item {
+    position: relative;
+    list-style: none;
+    padding-left: rem-calc(70);
+
+    &:before {
+      @extend %coin;
+      content: 'S';
+      position: absolute;
+      margin-left: rem-calc(-70);
+      color: $gold;
+      background-color: $ivory;
+    }
+
+
+    &:nth-of-type(2) {
+      &:before {
+        content: 'M';
+      }
+    }
+
+    &:nth-of-type(3) {
+      &:before {
+        content: 'L';
+      }
+    }
+
+  }
+
+  .two-col-w-icons__list.checkbox {
+
+    .two-col-w-icons__item:before {
+      content: '';
+      background-image: url(../img/svg/check.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @include screen-md-up {
+    .two-col-w-icons__content {
+      padding-left: 0;
+
+      > * {
+        max-width: 85%;
+      }
+
+      ul {
+        margin-top: $padding-small;
+      }
+    }
+    .two-col-w-icons__list {
+      padding-right: 0;
+    }
+  }
+}

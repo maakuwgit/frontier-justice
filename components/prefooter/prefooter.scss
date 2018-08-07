@@ -1,0 +1,130 @@
+/**
+ * prefooter Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-prefooter {
+  position: relative;
+  overflow: hidden;
+  background-color: $smoke;
+  background-image: linear-gradient(135deg, $battleship 0%, $gold 100%);
+
+  .container {
+    min-height: 75vw;
+    padding-top: $padding-small;
+    padding-bottom: $padding-small;
+
+    @include screen-lg-up {
+      min-height: 461px;
+      padding-top: $padding-medium;
+      padding-bottom: $padding-medium;
+    }
+
+  }
+
+  .prefooter__title {
+    margin: auto;
+    font-size: rem-calc(30);
+    font-weight: $text-book;
+    line-height: 42px;
+    line-height: 1.4;
+
+    @include screen-md-up {
+      font-size: rem-calc(35);
+      line-height: 49px;
+      line-height: 1.4;
+    }
+  }
+
+  .prefooter__content {
+    font-weight: $text-book;
+  }
+
+  .prefooter__icons {
+    margin-bottom: rem-calc(58);
+  }
+
+  .icon__link {
+    display: inline-flex;
+    flex-direction: column;
+    padding: $grid-column-padding;
+    color: $white;
+    fill: $white;
+    font-size: rem-calc(14);
+    line-height: 18px;
+    line-height: 1.28571428571429;
+  }
+
+  .icon__link__icon {
+    width: rem-calc(93);
+    height: rem-calc(93);
+    border: solid #{rem-calc(3)} $white;
+    border-radius: 200px;
+
+    &.icon-calendar,
+    &.icon-certified,
+    &.icon-inspection,
+    &.icon-location,
+    &.icon-odometer,
+    &.icon-service_date,
+    &.icon-user {
+
+      use {
+        transform: scale(0.8);
+        transform-origin: center;
+      }
+
+    }
+
+  }
+
+  .icon__link__label {
+    margin-top: rem-calc(9);
+    font-weight: $text-black;
+  }
+
+  h2, h3, h4, h5, h6, p, li {
+    color: $white;
+  }
+
+  p {
+    margin-bottom: $padding-medium * 0.75;
+    opacity: 0.75;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p:last-child:not(:first-child) {
+    opacity: 1;
+  }
+
+  @include screen-xs {
+    button,
+    .btn {
+      margin-bottom: $padding-xsmall;
+    }
+  }
+
+  @include screen-xs-up {
+    button,
+    .btn {
+      display: inline-flex;
+      max-width: 50%;
+      flex: 1 0.5 auto;
+      justify-content: center;
+      margin-right: $padding-xsmall/2;
+
+      + button,
+      + .btn {
+        margin-right: auto;
+        margin-left: $padding-xsmall/2;
+      }
+    }
+  }
+
+}

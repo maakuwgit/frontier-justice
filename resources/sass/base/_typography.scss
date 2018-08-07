@@ -1,0 +1,282 @@
+/**
+ * Typography
+ */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-BlackItalic.otf');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Bold.otf');
+    font-weight: 600;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-BoldItalic.otf');
+    font-weight: 600;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Medium.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-MediumItalic.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Book.otf');
+    font-weight: 300;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-BookItalic.otf');
+    font-weight: 300;
+    font-weight: normal;
+    font-style: italic;
+}
+
+%gotham {
+  font-family: $font-family;
+}
+
+.gotham {
+  @extend %gotham;
+}
+
+a {
+  text-decoration: $link-decoration;
+  &:hover {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+address {
+  font-style: normal;
+  font-size: rem-calc(14);
+  line-height: line-calc(28, 14);
+
+  @include screen-md-up {
+    font-size: rem-calc(16);
+    line-height: line-calc(32, 16);
+  }
+}
+
+blockquote {
+  font-size: rem-calc(22);
+  font-weight: $text-book;
+  line-height: line-calc(26,22);
+
+  p {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  cite {
+    font-size: rem-calc(16);
+    font-weight: $text-black;
+    font-style: normal;
+  }
+
+}
+
+h1,.h1, h2, .h2, h3,.h3, h4, .h4 {
+  margin: auto auto auto 0;
+}
+
+%h0 {
+  font-size: rem-calc(47);
+  font-weight: $text-black;
+  line-height: line-calc(62, 47);
+  text-transform: uppercase;
+
+  @include screen-lg-up {
+    font-size: rem-calc(62);
+    line-height: line-calc(82, 62);
+  }
+
+}
+
+.h0 {
+  @extend %h0;
+}
+
+%h1 {
+  font-size: rem-calc(39);
+  line-height: line-calc(46, 39);
+  font-weight: $text-bold;
+
+  @include screen-lg-up {
+    font-size: rem-calc(52);
+    line-height: line-calc(62, 52);
+  }
+
+}
+
+h1, .h1 {
+  @extend %h1
+}
+
+%h2 {
+  font-size: rem-calc(36);
+  font-weight: $text-bold;
+  line-height: line-calc(43, 36);
+
+  @include screen-lg-up {
+    font-size: rem-calc(48);
+    line-height: line-calc(58, 48);
+  }
+}
+
+h2,
+.h2 {
+  @extend %h2;
+}
+
+%h3 {
+  font-size: rem-calc(32);
+  font-weight: $text-med;
+  line-height: line-calc(37, 32);
+
+  @include screen-lg-up {
+    font-size: rem-calc(42);
+    line-height: line-calc(50, 42);
+  }
+
+}
+
+h3,
+.h3 {
+  @extend %h3;
+}
+
+%h4 {
+  font-size: rem-calc(28);
+  line-height: line-calc(31, 28);
+  font-weight: $text-black;
+
+  @include screen-lg-up {
+    font-size: rem-calc(38);
+    line-height: line-calc(42, 38);
+  }
+}
+
+h4,
+.h4 {
+  @extend %h4;
+}
+
+%h5 {
+  font-size: rem-calc(24);
+  line-height: line-calc(30, 24);
+  font-weight: $text-book;
+
+  @include screen-lg-up {
+    font-size: rem-calc(32);
+    line-height: line-calc(40, 32);
+  }
+}
+
+h5,
+.h5 {
+  @extend %h5;
+}
+
+%h6 {
+  font-size: rem-calc(16);
+  line-height: line-calc(19, 16);
+  font-weight: $text-book;
+
+  @include screen-lg-up {
+    font-size: rem-calc(22);
+    line-height: line-calc(26, 22);
+  }
+}
+
+h6,
+.h6 {
+  @extend %h6;
+}
+
+%small {
+  font-size: rem-calc(10.5);
+  line-height: line-calc(18, 10.5);
+
+  @include screen-md-up {
+    font-size: rem-calc(14);
+    line-height: line-calc(24, 14);
+  }
+
+}
+
+%large {
+  font-size: rem-calc(13);
+  line-height: line-calc(22, 13);
+
+  @include screen-md-up {
+    font-size: rem-calc(18);
+    line-height: line-calc(30, 18);
+  }
+
+}
+
+label {
+  font-size: rem-calc(10);
+  font-weight: $text-book;
+  line-height: line-calc(11.5, 10);
+
+  @include screen-md-up {
+    font-size: rem-calc(12);
+    line-height: line-calc(16, 12);
+  }
+
+}
+
+%p {
+  font-size: rem-calc(12);
+  font-weight: $text-book;
+  line-height: line-calc(19, 12);
+
+  @include screen-lg-up {
+    font-size: rem-calc(16);
+    line-height: line-calc(26, 16);
+  }
+}
+
+p, .p, li, td, dd {
+  @extend %p;
+}
+
+th, dt {
+  @extend %h4;
+}
+
+small, p.small, li.small, td.small, dd.small, dt.small {
+  @extend %small;
+}

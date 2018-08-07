@@ -1,0 +1,133 @@
+/**
+ * Variables
+ *   1. Colors
+ *   2. Units, sections, etc.
+ *   3. Screen
+ *   4. Bootstrap overrides
+ * _________________________________*/
+
+/**
+ * 1. Colors
+ * _________________________________*/
+
+ // Base colors (ordered the greys by lightness from lightest to darkest)
+$white: white;
+$ivory: #F3F3F3;
+$silver: #979797;
+$aluminum: #6F6F6F;
+$gold: #AA9767;
+$grey: #BABABA;
+$smoke: #4A4A4A;
+$ebony: #1f1f1f;
+$battleship: #2D2D2D;
+$black: black;
+
+// Markup Oriented
+$text-color: $silver;
+$selection: $white;
+$selection-bg: $gold;
+
+// Official social colors
+$facebook: #3461a1;
+$twitter: #28aae1;
+$google: #d44a2c;
+
+// Success
+$success-color: green;
+
+// Danger
+$danger-color: red;
+$danger-background: #f2dede;
+$danger-border: red;
+
+// Font Family
+$font-family: 'Gotham', sans-serif;
+
+// Font Weights
+$text-book: 300;
+$text-med: 400;
+$text-bold: 600;
+$text-black: 900;
+
+/**
+ * 2. Units, sections, etc.
+ * _________________________________*/
+$rem-base: 16;
+$site-width: 1280px;
+$container-width: 1133px;
+
+// Aspect Ratios
+$ratio_3_2: 66.67%;
+$ratio_16_9: 56.25%;
+$ratio_4_3: 75%;
+$ratio_2_1: 50%;
+
+// Widths
+$width-1-1: 100%;
+$width-1-2: 50%;
+$width-1-3: 33.3333333%;
+$width-1-4: 25%;
+$width-1-5: 20%;
+$width-1-6: 16.6666667%;
+
+
+/**
+ * 3. Screen
+ * _________________________________*/
+
+// Media queries
+$screen-xxl:  1920px;
+$screen-xl:  1600px;
+$screen-lg:  1280px;
+$screen-md:  992px;
+$screen-sm:  768px;
+$screen-xs:  480px;
+$screen-xxs: 400px;
+
+// Media query variables
+$screen-xxl-maximum:  $screen-xxl - 1;
+$screen-xl-maximum:  $screen-xl - 1;
+$screen-lg-maximum:  $screen-lg - 1;
+$screen-md-maximum:  $screen-md - 1;
+$screen-sm-maximum:  $screen-sm - 1;
+$screen-xs-maximum:  $screen-xs - 1;
+$screen-xxs-maximum: $screen-xxs - 1;
+
+$screen-sm-min: $screen-sm !default;
+$screen-md-min: $screen-md !default;
+$screen-lg-min: $screen-lg !default;
+$screen-xl-min: $screen-xl !default;
+$screen-xxl-min: $screen-xxl !default;
+
+// The point at which the navbar becomes uncollapsed
+// Choose from any of the "Media query variables"
+$screen-nav-mobile: $screen-md-maximum;
+
+//Padding Options
+$padding-xsmall: rem-calc(12.5);
+$padding-small: rem-calc(25);
+$padding-medium: rem-calc(50);
+$padding-large: rem-calc(100);
+$padding-xlarge: $padding-small + $padding-large;
+
+//Thumbnails
+$thumbnail-height: rem-calc(170);
+
+// The point at which the navbar becomes uncollapsed (do not modify)
+$grid-float-breakpoint: $screen-nav-mobile + 1;
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: $padding-small;
+$grid-column-padding: $padding-xsmall;
+
+// Container widths
+$container-sm:    (rem-calc($screen-sm) - $grid-gutter-width);
+$container-md:    (rem-calc($screen-md) - $grid-gutter-width);
+$container-lg:    (rem-calc($screen-lg) - $grid-gutter-width);
+
+// Links
+$link-color: $text-color;
+$link-decoration: none;
+$link-hover-color: $gold;
+$link-hover-decoration: none;

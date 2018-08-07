@@ -1,0 +1,177 @@
+/**
+ * logo-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-logo-grid {
+  @extend %section-padding;
+
+  .logo-grid__heading {
+    @extend %h2;
+    margin-right: auto;
+    margin-left: auto;
+    color: $ebony;
+  }
+
+  .logo-grid__logos {
+    position: relative;
+    list-style: none;
+    width: calc( 100% + #{$grid-column-padding*2} );
+    margin-left: $grid-column-padding * -1;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .logo-grid__content {
+    margin: auto auto #{$padding-xsmall} auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .logo-grid__block {
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0.33 auto;
+    display: flex;
+    width: 33.333334%;
+  }
+
+  .logo-grid__block__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: $padding-xsmall;
+    margin-bottom: $padding-xsmall;
+
+    @include screen-md {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 550px;
+    }
+  }
+
+  .logo-grid__block__title {
+    h2, h3, h4, h5, h6 {
+      margin-bottom: rem-calc(6);
+      margin-top: auto;
+      font-size: rem-calc(25);
+      font-weight: $text-black;
+      line-height: 32px;
+      line-height: 1.28;
+      color: $white;
+    }
+  }
+
+  .logo-grid__block__caption {
+
+    p {
+      margin-top: 0;
+      font-weight: $text-med;
+
+      &:last-of-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .logo-grid__block__image {
+    margin: auto;
+    padding: 5%;
+  }
+
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slick-initialized .slick-slide {
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  .slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .slick-dots {
+
+    li {
+      display: inline-flex;
+      padding: #{$padding-xsmall} #{$padding-xsmall/4};
+
+      &:last-child:first-child {
+        display: none;
+      }
+    }
+
+    button {
+      display: inline-flex;
+      width: rem-calc(10);
+      min-width: initial;
+      height: rem-calc(10);
+      padding: 0;
+      border: none;
+      border-radius: 200px;
+      font-size: 0;
+      background-color: rgba($silver,0.5);
+    }
+
+    .slick-active button {
+      background-color: $silver;
+    }
+  }
+
+  @include screen-sm-only {
+
+    .logo-grid__block {
+      flex: 0 0.25 auto;
+      width: 25%;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .logo-grid__content {
+      margin-bottom: $padding-small;
+    }
+
+    .logo-grid__block {
+      flex: 0 0.2 auto;
+      width: 20%;
+    }
+
+    .logo-grid__block__content {
+      margin-top: $padding-small;
+      margin-bottom: $padding-small;
+    }
+
+    .logo-grid__block__image {
+      padding: 10% 5%;
+    }
+
+  }
+}

@@ -1,0 +1,108 @@
+{
+    "key": "group_5b4e1dd498b7d",
+    "title": "Left \/ Right Image w\/ Gradient",
+    "fields": [
+        {
+            "key": "field_5b4e1dd4a02a5",
+            "label": "Style",
+            "name": "lr_w_gradient_style",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "lefty": "Left Side Image",
+                "righty": "Right Side Image"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b4e1dd4a02eb",
+            "label": "Image",
+            "name": "lr_w_gradient_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b4e1dd4a0369",
+            "label": "Background Color",
+            "name": "lr_w_gradient_background",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Color",
+            "ui_off_text": "Transparent"
+        },
+        {
+            "key": "field_5b4e1dd4a032b",
+            "label": "Content",
+            "name": "lr_w_gradient_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "Similar to the Left\/Right Block, only with a white-to-transparent gradient on the left overlaying the image.",
+    "modified": 1532435421
+}

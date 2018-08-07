@@ -1,0 +1,39 @@
+/**
+ * synopsis Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-synopsis {
+  @extend %section-padding;
+  margin-bottom: $padding-small;
+
+  .synopsis__col,
+  .synopsis__description {
+    padding-left: 0;
+  }
+
+  .synopsis__header {
+    @extend %h3;
+  }
+
+  .synopsis__description {
+    margin-right: auto;
+  }
+
+  @include screen-sm {
+    .synopsis__description {
+      margin-top: $padding-large;
+    }
+  }
+
+  @include screen-md-up {
+    margin-bottom: $padding-medium;
+
+    .synopsis__description {
+      padding-right: 0;
+    }
+  }
+}

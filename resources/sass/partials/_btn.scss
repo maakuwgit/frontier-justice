@@ -1,0 +1,123 @@
+/**
+ * Button Styles
+ */
+%btn {
+  display: inline-block;
+  min-width: 202px;
+  border: solid 1px $black;
+  margin: auto 0;
+  padding: #{rem-calc(15)} #{rem-calc(20)};
+  border-radius: 200px;
+  background-color: $black;
+  color: $white;
+  outline: none;
+  font-size: rem-calc(14);
+  line-height: line-calc(21, 14);
+  font-weight: $text-book;
+  text-align: center;
+  box-shadow: none;
+
+  &:hover, &:active, &:focus {
+    border-color: $silver;
+    background-color: $silver;
+  }
+
+  @include screen-md-up {
+    font-size: rem-calc(18);
+    line-height: line-calc(28, 18);
+  }
+}
+
+%btn--gold {
+  @extend %btn;
+  border-color: $gold;
+  background-color: $gold;
+
+  &:hover, &:active, &:focus {
+    color: $smoke;
+    border-color: $ivory;
+    background-color: $ivory;
+  }
+}
+
+%btn--white {
+  @extend %btn;
+  color: $aluminum;
+  border-color: $white;
+  background-color: $white;
+
+  &:hover, &:active, &:focus {
+    color: $white;
+    border-color: $aluminum;
+    background-color: $aluminum;
+  }
+}
+
+%btn--smoke {
+  @extend %btn;
+  border-color: $smoke;
+  background-color: $smoke;
+
+  &:hover, &:active, &:focus {
+    color: $smoke;
+    border-color: $ivory;
+    background-color: $ivory;
+  }
+}
+
+%btn--grey {
+  @extend %btn;
+  border-color: $grey;
+  background-color: $grey;
+
+  &:hover, &:active, &:focus {
+    color: $smoke;
+    border-color: $ivory;
+    background-color: $ivory;
+  }
+}
+
+%btn--silver {
+  @extend %btn;
+  border-color: $white;
+  background-color: $white;
+
+  &:hover, &:active, &:focus {
+    color: $grey;
+    border-color: $white;
+    background-color: $white;
+  }
+}
+
+.btn,
+input[type="submit"],
+button {
+  @extend %btn;
+
+  &.btn--muted {
+    color: $silver;
+    svg {
+      fill: $silver;
+    }
+  }
+
+  &.btn--silver {
+    @extend %btn--silver;
+  }
+
+  &.btn--gold {
+    @extend %btn--gold;
+  }
+
+  &.btn--smoke {
+    @extend %btn--smoke;
+  }
+
+  &.btn--grey {
+    @extend %btn--grey;
+  }
+
+  &.btn--white {
+    @extend %btn--white;
+  }
+}

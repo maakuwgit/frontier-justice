@@ -1,0 +1,54 @@
+/**
+ * blog-grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-blog-grid {
+  padding-top: $padding-medium;
+  padding-bottom: $padding-medium + $padding-small;
+
+  .entry__meta + & {
+    padding-top: 0;
+  }
+
+  .blog-grid__posts {
+    @extend %cards;
+  }
+
+  .blog-grid__blog {
+
+    .blog-grid__blog__title {
+      @extend %card__title;
+    }
+
+    .blog-grid__blog__meta {
+      @extend %card__meta;
+    }
+
+    .blog-grid__blog__nav {
+      @extend %card__nav;
+    }
+
+    .blog-grid__blog__body {
+      @extend %card__body;
+    }
+
+    .blog-grid__blog__feature__wrapper {
+      @extend %card__figure;
+    }
+
+  }
+
+  .blog-grid__blog_wrapper {
+    @extend %card;
+  }
+
+  @include screen-lg-up {
+    padding-top: $padding-large;
+    padding-bottom: $padding-large + $padding-medium;
+  }
+
+}

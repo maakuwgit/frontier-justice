@@ -1,0 +1,49 @@
+/**
+ * two-col-w-heading Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-two-col-w-heading {
+  @extend %section-padding;
+
+  .two-col-w-heading__heading {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: rem-calc(22);
+  }
+
+  .two-col-w-heading__header {
+    font-size: rem-calc(24);
+    line-height: 33px;
+    line-height: 1.4;
+  }
+
+  + .ll-timeline {
+    padding-top: 0;
+  }
+
+  @include screen-md-up {
+
+    .tow-col-w-heading__header {
+      font-size: rem-calc(35);
+      line-height: 49px;
+    }
+    
+    .two-col-w-heading__block {
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+    }
+
+  }
+
+}
