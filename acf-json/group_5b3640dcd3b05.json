@@ -125,6 +125,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Centered text with textured background and a list of icons",
-    "modified": 1533747456
+    "description": "Centered text with a background image, optional button",
+    "modified": 1533755848
 }

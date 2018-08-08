@@ -50,6 +50,7 @@ $price           = $component_data['supertitle']['price'];
 $heading         = $component_data['heading']['text'];
 $heading_tag     = $component_data['heading']['tag'];
 $content         = $component_data['content'];
+$button          = $component_data['button'];
 $video           = $component_data['video'];
 $overlay         = $component_data['overlay'];
 $image           = $component_data['image'];
@@ -144,6 +145,14 @@ if( $image ) {
       <?php echo format_text($content); ?>
     </div>
     <!-- .hero__content -->
+
+  <?php endif; ?>
+
+  <?php if( $button ) : ?>
+    <div class="hero__button col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <a class="<?php echo $button['button_type']; ?>" href="<?php echo $button['link']['url'];?>"><?php echo $button['link']['title'];?></a>
+    </div>
+    <!-- .prefooter__button.col.col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12 -->
 
   <?php endif; ?>
 

@@ -32,12 +32,17 @@
     min-height: inherit;
   }
 
+  .hero__button,
+  .hero__heading,
+  .hero__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .hero__heading,
   .hero__content {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
     color: $white;
   }
 
@@ -53,6 +58,10 @@
     @extend %h0;
   }
 
+  .hero__button {
+    margin-top: $padding-small * 0.75;
+  }
+
   .play-video-button {
     @extend %icon-link;
     margin-top: rem-calc(21);
@@ -62,6 +71,15 @@
     bottom: 0;
     border-width: #{rem-calc(75)} 100vw 0 0;
     border-color: transparent $white transparent transparent;
+  }
+
+  @include screen-sm {
+
+    .hero__button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
   }
 
   @include screen-md-up {
@@ -76,6 +94,10 @@
     .hero__content {
       min-width: 50.01%;//This lil' hack forces a stack
       margin-right: 0;
+    }
+
+    .hero__button {
+      margin-top: $padding-medium * 0.75;
     }
 
   }

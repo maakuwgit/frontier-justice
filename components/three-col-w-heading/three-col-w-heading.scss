@@ -19,12 +19,17 @@
   }
 
   .three-col-w-heading__header {
-    @extend %h3;
-    color: $ebony;
+    @extend %h5;
+    color: $battleship;
   }
 
   .three-col-w-heading__content {
-    margin-bottom: rem-calc(22);
+    margin-bottom: $padding-medium * 0.75;
+
+    p {
+      @extend %large;
+      color: $black;
+    }
   }
 
   .three-col-w-heading__block {
@@ -69,6 +74,10 @@
   }
 
   @include screen-md-up {
+
+    .three-col-w-heading__content {
+      margin-bottom: $padding-large * 0.75;
+    }
 
     .three-col-w-heading__block {
       margin-top: 0;
