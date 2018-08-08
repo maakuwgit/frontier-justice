@@ -109,99 +109,6 @@
                     "min": "",
                     "max": ""
                 },
-                "5b4e58681f74c": {
-                    "key": "5b4e58681f74c",
-                    "name": "bus-comparison",
-                    "label": "Bus Comparison",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b4e58681f74d",
-                            "label": "Bus Comparison",
-                            "name": "bus-comparison",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b574c8e7a29c"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b574d3f67b12": {
-                    "key": "5b574d3f67b12",
-                    "name": "bus-types-grid",
-                    "label": "Bus Types Grid",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b574d3f67b13",
-                            "label": "Bus Types Grid",
-                            "name": "bus-types-grid",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b2a937793a91"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b4032a08f141": {
-                    "key": "5b4032a08f141",
-                    "name": "customizable",
-                    "label": "Customizable",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b4032a08f142",
-                            "label": "Customizable",
-                            "name": "customizable",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_5b4e35a995877"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "5b4e5635adf3f": {
                     "key": "5b4e5635adf3f",
                     "name": "icon-grid",
@@ -537,6 +444,18 @@
                 "operator": "==",
                 "value": "templates\/template-home.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-dark.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
+            }
         ]
     ],
     "menu_order": 1,
@@ -550,5 +469,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1533663253
+    "modified": 1533748564
 }

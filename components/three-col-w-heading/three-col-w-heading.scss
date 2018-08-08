@@ -7,7 +7,11 @@
  */
 
 .ll-three-col-w-heading {
+  position: relative;
+  z-index: 2;//Dev Note: likely temporary
   @extend %section-padding;
+  @include ragged-before('w', true);
+  @include ragged-after('w', true);
 
   .three-col-w-heading__heading {
     padding-right: 0;
@@ -24,6 +28,19 @@
   }
 
   .three-col-w-heading__block {
+    margin-top: $padding-medium;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $battleship;
+    }
+
+    p, time, li, dd {
+      color: $aluminum;
+    }
 
     li {
       padding-top: #{rem-calc(6)};
@@ -32,9 +49,29 @@
 
   }
 
+  .icon-bison {
+    width: rem-calc(50);
+    height: rem-calc(50);
+    fill: $gold;
+    margin-bottom: $padding-xsmall;
+  }
+
+  @include screen-sm-only {
+
+    .three-col-w-heading__block {
+
+      &:nth-child(even) {
+        margin-top: 0;
+      }
+
+    }
+
+  }
+
   @include screen-md-up {
 
     .three-col-w-heading__block {
+      margin-top: 0;
 
       &:first-of-type {
         padding-left: 0;
@@ -50,6 +87,10 @@
     .three-col-w-heading__content {
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .icon-bison {
+      margin-bottom: $padding-small;
     }
 
   }

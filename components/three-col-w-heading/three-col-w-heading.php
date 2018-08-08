@@ -71,17 +71,26 @@ $column_3    = $component_data['column_3'];
 
   <div class="container row">
 
-    <div class="three-col-w-heading__block col col-md-6of12 col-lg-4of12 col-xl-4of12">
+    <div class="three-col-w-heading__block col col-sm-6of12 col-md-6of12 col-lg-4of12 col-xl-4of12">
+      <svg class="icon icon-bison">
+        <use xlink:href="#icon-bison"></use>
+      </svg>
       <?php echo $column_1; ?>
     </div>
     <!-- .three-col-w-heading__block -->
 
-    <div class="three-col-w-heading__block col col-md-6of12 col-lg-4of12 col-xl-4of12">
+    <div class="three-col-w-heading__block col col-sm-6of12 col-md-6of12 col-lg-4of12 col-xl-4of12">
+      <svg class="icon icon-bison">
+        <use xlink:href="#icon-bison"></use>
+      </svg>
       <?php echo $column_2; ?>
     </div>
     <!-- .three-col-w-heading__block -->
 
     <div class="three-col-w-heading__block col col-lg-4of12 col-xl-4of12">
+      <svg class="icon icon-bison">
+        <use xlink:href="#icon-bison"></use>
+      </svg>
       <?php echo $column_3; ?>
     </div>
     <!-- .three-col-w-heading__block -->

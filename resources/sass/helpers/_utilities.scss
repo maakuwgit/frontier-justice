@@ -49,6 +49,7 @@
   display: none !important;
 }
 
+//Used on most sections to space them out
 %section-padding {
   padding-top: $padding-small;
   padding-bottom: $padding-small;
@@ -288,32 +289,32 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
   &.black {
     color: $black;
   }
-  &.white {
-    color: $white;
+  &.ebony {
+    color: $ebony;
   }
-  &.blue {
-    color: $gold;
+  &.battleship {
+    color: $battleship;
   }
-  &.navy {
+  &.smoke {
     color: $smoke;
   }
-  &.cerulean {
-    color: $battleship;
+  &.grey {
+    color: $grey;
+  }
+  &.gold {
+    color: $gold;
+  }
+  &.aluminum {
+    color: $aluminum;
   }
   &.silver {
     color: $silver;
   }
-  &.powder {
+  &.ivory {
     color: $ivory;
   }
-  &.periwinkle {
-    color: $aluminum;
-  }
-  &.talc {
-    color: $ivory;
-  }
-  &.grey {
-    color: $grey;
+  &.white {
+    color: $white;
   }
 }
 
@@ -321,32 +322,32 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   &.black {
     background-color: $black;
   }
-  &.white {
-    background-color: $white;
+  &.ebony {
+    background-color: $ebony;
   }
-  &.blue {
-    background-color: $gold;
+  &.battleship {
+    background-color: $battleship;
   }
-  &.navy {
+  &.smoke {
     background-color: $smoke;
   }
-  &.cerulean {
-    background-color: $battleship;
+  &.grey {
+    background-color: $grey;
+  }
+  &.gold {
+    background-color: $gold;
+  }
+  &.aluminum {
+    background-color: $aluminum;
   }
   &.silver {
     background-color: $silver;
   }
-  &.powder {
+  &.ivory {
     background-color: $ivory;
   }
-  &.talc {
-    background-color: $ivory;
-  }
-  &.periwinkle {
-    background-color: $aluminum;
-  }
-  &.grey {
-    background-color: $grey;
+  &.white {
+    background-color: $white;
   }
 }
 
