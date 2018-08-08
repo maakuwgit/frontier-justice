@@ -8,8 +8,8 @@
 
 .ll-hero {
   position: relative;
-  min-height: 637px;
-  height: 66.6667vh;
+  min-height: 320px;
+  height: 42vh;
   flex-direction: column;
   overflow: hidden;
   margin-bottom: 0 !important;
@@ -33,7 +33,7 @@
   }
 
   .hero__heading,
-  .hero__supertitle {
+  .hero__content {
     margin-right: auto;
     margin-left: auto;
     padding-left: 0;
@@ -41,8 +41,12 @@
     color: $white;
   }
 
-  .hero__supertitle {
-    @extend %supertitle;
+  .hero__content {
+
+    p {
+      color: inherit;
+    }
+
   }
 
   .hero__heading {
@@ -61,13 +65,16 @@
   }
 
   @include screen-md-up {
+    min-height: rem-calc(637);
+    height: 85vh;
 
     &.big-headline .hero__heading {
       margin-bottom: rem-calc(195);
     }
 
     .hero__heading,
-    .hero__supertitle {
+    .hero__content {
+      min-width: 50.01%;//This lil' hack forces a stack
       margin-right: 0;
     }
 

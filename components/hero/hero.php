@@ -9,6 +9,8 @@
 $defaults = [
   'supertitle'  => false,
   'heading'     => false,
+  'content'     => false,
+  'button'      => false,
   'image'       => false,
   'video'       => false,
   'overlay'     => 1
@@ -31,7 +33,7 @@ $component_args = ll_parse_args( $component_args, $args );
  * @var array
  * @see args['classes']
  */
-$classes        = $component_args['classes'] ?: array();
+$classes        = $component_args['classes'];
 if( $classes ) $classes = ' ' . implode( " ", $classes );
 
 /**
@@ -42,13 +44,15 @@ if( $classes ) $classes = ' ' . implode( " ", $classes );
  */
 $id = $component_args['id'];
 
-$supertitle         = $component_data['supertitle']['text'];
-$supertitle_tag     = $component_data['supertitle']['tag'];
-$heading            = $component_data['heading']['text'];
-$heading_tag        = $component_data['heading']['tag'];
-$video              = $component_data['video'];
-$overlay            = $component_data['overlay'];
-$image              = $component_data['image'];
+$supertitle      = $component_data['supertitle']['text'];
+$supertitle_tag  = $component_data['supertitle']['tag'];
+$price           = $component_data['supertitle']['price'];
+$heading         = $component_data['heading']['text'];
+$heading_tag     = $component_data['heading']['tag'];
+$content         = $component_data['content'];
+$video           = $component_data['video'];
+$overlay         = $component_data['overlay'];
+$image           = $component_data['image'];
 
 if( $image ) {
   $bg = ' data-backgrounder';
@@ -112,7 +116,16 @@ if( $image ) {
     <<?php echo $supertitle_tag; ?> class="hero__supertitle col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo $supertitle; ?>
     </<?php echo $supertitle_tag; ?>>
-    <!-- .hero__supertitle.hdg__supertitle -->
+    <!-- .hero__supertitle -->
+
+  <?php endif; ?>
+
+  <?php if( $price ) : ?>
+
+    <div class="hero__price col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <?php echo format_text($price); ?>
+    </div>
+    <!-- .hero__price -->
 
   <?php endif; ?>
 
@@ -121,7 +134,16 @@ if( $image ) {
     <<?php echo $heading_tag; ?> class="hero__heading col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo $heading; ?>
     </<?php echo $heading_tag; ?>>
-    <!-- .hero__title.hdg__title -->
+    <!-- .hero__heading -->
+
+  <?php endif; ?>
+
+  <?php if( $content ) : ?>
+
+    <div class="hero__content col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <?php echo format_text($content); ?>
+    </div>
+    <!-- .hero__content -->
 
   <?php endif; ?>
 

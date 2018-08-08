@@ -1,4 +1,3 @@
-<?php get_template_part('templates/contents/hero', 'page'); ?>
 <?php $related = get_field('related_articles'); ?>
 <article <?php post_class( ($related ? '' : 'no_related') ); ?>>
 

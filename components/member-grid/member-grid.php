@@ -87,7 +87,7 @@ $members = new WP_Query( $margs );
     $offices    = get_the_terms(get_the_ID(), 'offices');
 
   ?>
-    <li class="member-grid__item col col-sm-6of12 col-md-6of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12">
+    <li class="member-grid__item col col-sm-6of12 col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
 
       <figure id="<?php echo basename(get_permalink()); ?>" class="member-grid__thumb__figure relative">
         <a href="<?php the_permalink(); ?>" data-magnific></a>
@@ -100,11 +100,11 @@ $members = new WP_Query( $margs );
 
         <figcaption class="member-grid__thumb__caption">
 
-          <div class="member-grid__thumb__title h4"><?php the_title(); ?></div>
+          <span class="member-grid__thumb__title h4 block"><?php the_title(); ?></span>
 
         <?php if( $positions && ! is_wp_error( $positions ) ) : ?>
 
-          <div class="member-grid__thumb__position">
+          <span class="member-grid__thumb__position block">
 
           <?php
             $position_names = [];
@@ -115,30 +115,20 @@ $members = new WP_Query( $margs );
 
             $position_list = join(', ', $position_names);
 
-            echo format_text($position_list);
+            echo $position_list;
           ?>
 
-          </div><!-- .member-grid__thumb__position -->
+          </span><!-- .member-grid__thumb__position -->
 
         <?php endif; ?>
 
-        <?php if( $offices && ! is_wp_error( $offices ) ) : ?>
+        <?php if( has_excerpt() ) : ?>
 
-          <div class="member-grid__thumb__office">
+          <div class="member-grid__thumb__excerpt">
 
-          <?php
-            $office_names = [];
+          <?php the_excerpt(); ?>
 
-            foreach( $offices as $office ) {
-              $office_names[] = $office->name;
-            }
-
-            $office_list = join(', ', $office_names);
-
-            echo format_text($office_list);
-          ?>
-
-          </div><!-- .member-grid__thumb__office -->
+          </div><!-- .member-grid__thumb__excerpt -->
 
         <?php endif; ?>
 

@@ -9,6 +9,9 @@
 
   ll_include_component(
     'hero',
-    $hero
+    $hero,
+    array(
+      'classes' => array('big-headline')
+    )
   );
 ?>

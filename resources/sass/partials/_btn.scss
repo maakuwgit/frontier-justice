@@ -100,24 +100,24 @@ button {
       fill: $silver;
     }
   }
+}
 
-  &.btn--silver {
-    @extend %btn--silver;
-  }
+.btn--silver {
+  @extend %btn--silver;
+}
 
-  &.btn--gold {
-    @extend %btn--gold;
-  }
+.btn--gold {
+  @extend %btn--gold;
+}
 
-  &.btn--smoke {
-    @extend %btn--smoke;
-  }
+.btn--smoke {
+  @extend %btn--smoke;
+}
 
-  &.btn--grey {
-    @extend %btn--grey;
-  }
+.btn--grey {
+  @extend %btn--grey;
+}
 
-  &.btn--white {
-    @extend %btn--white;
-  }
+.btn--white {
+  @extend %btn--white;
 }

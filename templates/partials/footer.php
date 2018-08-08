@@ -8,7 +8,7 @@
 
     <div class="row container centered center">
 
-      <div class="footer__logo_wrap col col-md-10of12 col-lg-6of12 col-xl-6of12">
+      <div class="footer__logo_wrap col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
 
         <a class="footer__logo__anchor" href="<?php echo esc_url(home_url('/')); ?>">
           <?php echo ll_get_logo();?>

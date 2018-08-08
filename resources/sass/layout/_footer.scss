@@ -115,12 +115,12 @@
       margin-bottom: $padding-xsmall;
     }
 
-    .gform_heading .gform_title,
+    .gform_title,
     .gform_not_found,
     .gform_confirmation_message {
-      font-size: rem-calc(16);
+      font-size: rem-calc(12);
       color: $white;
-      line-height: line-calc(16, 19);
+      line-height: line-calc(12, 15);
     }
 
     input[type=email],
@@ -132,15 +132,12 @@
       border-color: $white;
       border-radius: 200px;
       @extend %p;
-      line-height: line-calc(24,16);
       box-shadow: none;
       background-color: transparent;
 
       @include placeholder-text {
-        font-size: rem-calc(16);
         color: $white;
         font-weight: $text-book;
-        line-height: line-calc(24,16);
       }
 
       &:hover {
@@ -155,39 +152,41 @@
     .gform_footer {
       display: inline-block;
       position: absolute;
-      right: rem-calc(20);
-      bottom: rem-calc(48);
+      right: rem-calc(22);
+      bottom: rem-calc(49);
       z-index: 1;
+    }
 
-      input[type=submit].gform_button.button {
-        min-width: initial;
-        margin: auto;
-        padding: #{rem-calc(4)} #{rem-calc(22)} #{rem-calc(1)};
-        font-size: rem-calc(14);
-        text-transform: uppercase;
-        line-height: line-calc(28,14);
-        background-color: $gold;
+    input[type=submit].gform_button.button {
+      min-width: initial;
+      margin: auto;
+      padding: #{rem-calc(2)} #{rem-calc(10)};
+      text-transform: uppercase;
+      font-size: rem-calc(10);
+      line-height: line-calc(20,10);
+      background-color: $gold;
 
-        &:hover, &:active, &:focus {
-          color: $smoke;
-          border-color: $ivory;
-          background-color: $ivory;
-        }
+      &:hover, &:active, &:focus {
+        color: $smoke;
+        border-color: $ivory;
+        background-color: $ivory;
       }
+    }
+
+  }
+
+  @include screen-lg {
+
+    .form-skin .ginput_container {
+      padding-left: 0;
+      padding-right: 0;
     }
 
   }
 
   @include screen-md-up {
 
-    .location-grid__location__title,
-    .location-grid__location__description,
-    .location-grid__location__address {
-      font-size: rem-calc(16);
-      line-height: line-calc(28,16);
-    }
-
-    .gform_title,
+    .gform_heading .gform_title,
     .gform_not_found,
     .gform_confirmation_message {
       margin-top: $padding-medium;
@@ -240,30 +239,59 @@
     }
   }
 
-  @include screen-sm-only {
-   .footer__social_wrap {
-      display: flex;
-      justify-content: center;
-      margin-top: $padding-small;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
-
   @include screen-sm-up {
+
+    .location-grid__location__title,
+    .location-grid__location__description,
+    .location-grid__location__address {
+      font-size: rem-calc(16);
+      line-height: line-calc(28,16);
+    }
+
+    .gform_heading .gform_title,
+    .gform_not_found,
+    .gform_confirmation_message {
+      font-size: rem-calc(16);
+      line-height: line-calc(16, 19);
+    }
+
     .nav {
       margin-left: rem-calc(60);
     }
+
+    .form-skin {
+
+      input[type=email],
+      input[type=tel],
+      input[type=text],
+      select,
+      textarea {
+
+        @include placeholder-text {
+          font-size: rem-calc(16);
+          line-height: line-calc(24,16);
+        }
+
+      }
+
+    }
+
+    .gform_footer {
+
+      input[type=submit].gform_button.button {
+        padding: #{rem-calc(4)} #{rem-calc(22)} #{rem-calc(1)};
+        font-size: rem-calc(14);
+        line-height: line-calc(28,14);
+      }
+
+    }
+
   }
 
   @include screen-sm {
     .footer__logo_wrap,
     .footer__navigation_wrap,
     .footer__social_wrap {
-      display: flex;
-      justify-content: center;
-      width: 100%;
       margin-top: $padding-small;
       margin-right: auto;
       margin-left: auto;

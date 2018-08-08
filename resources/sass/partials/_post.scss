@@ -33,7 +33,7 @@
   > {
 
     *:not(blockquote) {
-      max-width: 1130px;
+      max-width: rem-calc(1130);//Since we want these to scale on XL+ screens, these need to be rems
       margin-left: auto;
       margin-right: auto;
     }

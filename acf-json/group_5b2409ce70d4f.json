@@ -3,7 +3,7 @@
     "title": "Hero",
     "fields": [
         {
-            "key": "field_5b240b32b71c2",
+            "key": "field_5b6ae714a6ac5",
             "label": "Supertitle",
             "name": "hero_supertitle",
             "type": "group",
@@ -18,7 +18,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b240b32b71c3",
+                    "key": "field_5b6ae714a6ac6",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -37,7 +37,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b240b32b71c4",
+                    "key": "field_5b6ae714a6ac7",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -57,6 +57,25 @@
                     "default_value": "h1",
                     "layout": "horizontal",
                     "return_format": "value"
+                },
+                {
+                    "key": "field_5b6ae758a6ac8",
+                    "label": "Price",
+                    "name": "price",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -108,13 +127,85 @@
                         "id": ""
                     },
                     "choices": {
-                        "h2": "H2",
-                        "h3": "H3"
+                        "h1": "H1",
+                        "h2": "H2"
                     },
                     "allow_null": 0,
-                    "default_value": "h2",
+                    "default_value": "h1",
                     "layout": "horizontal",
                     "return_format": "value"
+                }
+            ]
+        },
+        {
+            "key": "field_5b6ae3d7eee58",
+            "label": "Content",
+            "name": "hero_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5b6ae84f27d46",
+            "label": "Button",
+            "name": "hero_button",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5b6ae87827d47",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_5b6ae88c8dac1"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5b6aea1506d0d",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -155,8 +246,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "0.6",
-            "placeholder": "0.6",
+            "default_value": 1,
+            "placeholder": 1,
             "prepend": "",
             "append": "",
             "min": 0,
@@ -183,9 +274,9 @@
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/template-home.php"
+                "value": "page"
             }
         ]
     ],
@@ -194,8 +285,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
     "active": 1,
     "description": "100vw, 85vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
-    "modified": 1533663216
+    "modified": 1533733437
 }
