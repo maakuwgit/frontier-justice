@@ -94,6 +94,51 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_5b6b4ac53c3d7",
+            "label": "Background",
+            "name": "cta_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b6b4aee3c3d8",
+            "label": "Overlay",
+            "name": "cta_overlay_strength",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": 1,
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1"
         }
     ],
     "location": [
@@ -113,5 +158,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "A horizontal form. Only the Form ID  is an option.",
-    "modified": 1533755959
+    "modified": 1533758386
 }

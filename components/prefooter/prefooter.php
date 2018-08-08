@@ -41,7 +41,6 @@ $heading        = $component_data['heading'];
 $content        = $component_data['content'];
 $link           = $component_data['link'];
 
-if ( !$title && !$content ) return;
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>

@@ -7,51 +7,6 @@ if( have_rows( 'components' ) ) {
     the_row();
 
     switch( get_row_layout() ) {
-      case 'bus-types-grid' :
-        //About Us”
-        $buses = array(
-          'heading'    => get_sub_field('bus_grid_heading'),
-          'content'    => get_sub_field('bus_grid_content'),
-          'cards'      => get_sub_field('bus_grid_cards')
-        );
-
-        $components .= ll_include_component(
-          'bus-types-grid',
-          $buses,
-          array(),
-          true
-        );
-      case 'bus-comparison' :
-        //About Us”
-        $buses = array(
-          'heading'           => get_sub_field('comparison_bus_heading'),
-          'content'           => get_sub_field('comparison_bus_content'),
-          'bus_left'          => get_sub_field('comparison_bus_left'),
-          'bus_right'         => get_sub_field('comparison_bus_right')
-        );
-
-        $components .= ll_include_component(
-          'specs-comparison',
-          $buses,
-          array(),
-          true
-        );
-      break;
-      case 'customizable' :
-        //New Buses
-        $customizable = array(
-          'content'     => get_sub_field('customizable_content'),
-          'image'       => get_sub_field('customizable_image'),
-          'features'    => get_sub_field('customizable_features'),
-        );
-
-        $components .= ll_include_component(
-          'customizables',
-          $customizable,
-          array(),
-          true
-        );
-      break;
       case 'hero' :
         //The Blog Archive and Blog Single pages
         $hero = array(
@@ -70,14 +25,18 @@ if( have_rows( 'components' ) ) {
         );
       break;
       case 'call-to-action':
-        //New Buses
-        $form = array(
-          'form_id'  => get_sub_field('cta_form_id')
+        $cta = array(
+          'supertitle'  => get_sub_field('cta_supertitle'),
+          'heading'     => get_sub_field('cta_heading'),
+          'content'     => get_sub_field('cta_content'),
+          'links'       => get_sub_field('cta_links'),
+          'image'       => get_sub_field('cta_image'),
+          'overlay'     => get_sub_field('cta_overlay_strength')
         );
 
         $components .= ll_include_component(
           'call-to-action',
-          $form,
+          $cta,
           array(),
           true
         );

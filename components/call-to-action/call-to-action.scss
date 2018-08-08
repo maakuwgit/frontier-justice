@@ -7,5 +7,65 @@
  */
 
 .ll-call-to-action {
+  background-color: $smoke;
+  @extend %section-padding;
+  @include ragged-after('w');
+  @include ragged-before('w');
+
+  .container {
+    padding-top: $padding-medium;
+    padding-bottom: $padding-medium;
+  }
+
+  .call-to-action__content,
+  .call-to-action__heading,
+  .call-to-action__supertitle {
+    min-width: 50.01%;//This lil' hack forces a stack
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+  }
+
+  .call-to-action__content {
+
+    h2, h3, h4, h5, h6, p, time, li, dd, dt {
+      color: $white;
+    }
+
+    p {
+      @extend %small;
+    }
+
+  }
+
+  .call-to-action__supertitle {
+    @extend %h6;
+  }
+
+  .call-to-action__heading {
+    @extend %h1;
+  }
+
+  .call-to-action__button {
+    min-width: rem-calc(254);
+    box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
+    margin-top: rem-calc(30);
+    margin-right: $grid-gutter-width;
+    margin-left: $grid-gutter-width;
+    text-transform: uppercase;
+  }
+
+  @include screen-md-up {
+
+    .container {
+      padding-top: $padding-small;
+      padding-bottom: $padding-small;
+    }
+
+    .call-to-action__button {
+      margin-top: rem-calc(40);
+    }
+
+  }
 
 }

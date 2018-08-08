@@ -67,12 +67,31 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
                     "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b6b57dab77e0",
+                    "label": "Suffix",
+                    "name": "suffix",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "\/hr",
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
@@ -291,5 +310,5 @@
     ],
     "active": 1,
     "description": "100vw, 85vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
-    "modified": 1533733437
+    "modified": 1533761536
 }
