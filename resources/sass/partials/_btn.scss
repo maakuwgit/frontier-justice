@@ -2,7 +2,9 @@
  * Button Styles
  */
 %btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 202px;
   border: solid 1px $black;
   margin: auto 0;
@@ -20,6 +22,15 @@
   &:hover, &:active, &:focus {
     border-color: $silver;
     background-color: $silver;
+  }
+
+  &.has_icon {
+    min-width: rem-calc(250);
+    justify-content: space-between;
+  }
+
+  .icon {
+    margin-left: rem-calc(40);
   }
 
   @include screen-md-up {

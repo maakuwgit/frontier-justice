@@ -61,8 +61,25 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'TradeGothicLTStd';
+    src: url('../fonts/TradeGothicLTStd-Cn18.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 %gotham {
   font-family: $font-family;
+}
+
+.trade-gothic {
+  @extend %trade-gothic;
+}
+
+%trade-gothic {
+  font-family: $font-family-alt;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .gotham {
@@ -118,7 +135,7 @@ h1,.h1, h2, .h2, h3,.h3, h4, .h4 {
 
   @include screen-sm-up {
     font-size: rem-calc(62);
-    line-height: line-calc(82, 62);
+    line-height: line-calc(70, 62);
   }
 
 }
@@ -242,6 +259,19 @@ h6,
   @include screen-sm-up {
     font-size: rem-calc(18);
     line-height: line-calc(30, 18);
+  }
+
+}
+
+%supertitle {
+  font-size: rem-calc(13);
+  line-height: line-calc(20, 13);
+  text-transform: uppercase;
+  font-weight: $text-book;
+
+  @include screen-sm-up {
+    font-size: rem-calc(18);
+    line-height: line-calc(28, 18);
   }
 
 }

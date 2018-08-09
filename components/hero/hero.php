@@ -47,10 +47,17 @@ $id = $component_args['id'];
 $supertitle      = $component_data['supertitle']['text'];
 $supertitle_tag  = $component_data['supertitle']['tag'];
 $price           = $component_data['supertitle']['price'];
+$suffix          = $component_data['supertitle']['suffix'];
 $heading         = $component_data['heading']['text'];
 $heading_tag     = $component_data['heading']['tag'];
 $content         = $component_data['content'];
 $button          = $component_data['button'];
+if( $button ) {
+  $icon            = $component_data['button']['icon'];
+
+}else {
+  $icon            = '';
+}
 $video           = $component_data['video'];
 $overlay         = $component_data['overlay'];
 $image           = $component_data['image'];
@@ -124,7 +131,7 @@ if( $image ) {
   <?php if( $price ) : ?>
 
     <div class="hero__price col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
-      <?php echo format_text($price); ?>
+      <span><?php echo $price; ?></span><?php echo $suffix; ?>
     </div>
     <!-- .hero__price -->
 
@@ -150,9 +157,19 @@ if( $image ) {
 
   <?php if( $button ) : ?>
     <div class="hero__button col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
-      <a class="<?php echo $button['button_type']; ?>" href="<?php echo $button['link']['url'];?>"><?php echo $button['link']['title'];?></a>
+
+      <a class="<?php echo $button['button_type'] . ( $icon ? ' has_icon' : '' );?>" href="<?php echo $button['link']['url'];?>"><?php echo $button['link']['title'];?>
+
+        <?php if( $icon ) : ?>
+          <svg class="icon <?php echo $icon; ?>">
+            <use xlink:href="#<?php echo $icon; ?>"></use>
+          </svg>
+        <?php endif; ?>
+
+      </a>
+
     </div>
-    <!-- .prefooter__button.col.col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12 -->
+    <!-- .hero__button -->
 
   <?php endif; ?>
 

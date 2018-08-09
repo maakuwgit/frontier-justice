@@ -34,16 +34,32 @@
 
   .hero__button,
   .hero__heading,
-  .hero__content {
+  .hero__content,
+  .hero__supertitle,
+  .hero__price {
     padding-left: 0;
     padding-right: 0;
   }
 
   .hero__heading,
-  .hero__content {
+  .hero__content,
+  .hero__supertitle,
+  .hero__price {
     margin-right: auto;
     margin-left: auto;
     color: $white;
+  }
+
+  .hero__price {
+    @extend %large;
+    display: flex;
+    margin-bottom: rem-calc(8);
+    text-transform: uppercase;
+
+    span {
+      @extend %h4;
+      margin-right: rem-calc(6);
+    }
   }
 
   .hero__content {
@@ -54,13 +70,27 @@
 
   }
 
+  .hero__supertitle {
+    @extend %supertitle;
+    @extend %trade-gothic;
+    margin-bottom: rem-calc(30);
+  }
+
   .hero__heading {
     @extend %h0;
   }
 
   .hero__button {
     margin-top: $padding-small * 0.75;
-    text-transform: uppercase;
+
+    a, button {
+      @extend %trade-gothic;
+      padding: #{rem-calc(21)} #{rem-calc(32)} #{rem-calc(15)};
+
+      .icon {
+        margin-top: rem-calc(-3);
+      }
+    }
   }
 
   .play-video-button {
@@ -92,7 +122,9 @@
     }
 
     .hero__heading,
-    .hero__content {
+    .hero__content,
+    .hero__supertitle,
+    .hero__price {
       min-width: 50.01%;//This lil' hack forces a stack
       margin-right: 0;
     }
