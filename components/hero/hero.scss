@@ -22,6 +22,7 @@
     margin-bottom: rem-calc(195/2);
     font-size: rem-calc(82);
     line-height: line-calc(70,82);
+    letter-spacing: rem-calc(5.96);
   }
 
   + .entry__meta {
@@ -89,6 +90,7 @@
 
     a, button {
       @extend %open-sans;
+      @extend %btn--shadow;
       padding: #{rem-calc(21)} #{rem-calc(32)};
     }
   }
@@ -141,7 +143,7 @@
 
   @include screen-xl-up {
     min-height: rem-calc(637*1.25);
-    
+
     body.admin-bar & {
       padding-top: rem-calc(74);
     }

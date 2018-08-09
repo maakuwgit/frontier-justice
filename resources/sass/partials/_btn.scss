@@ -39,6 +39,10 @@
   }
 }
 
+%btn--shadow {
+  box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
+}
+
 %btn--gold {
   @extend %btn;
   border-color: $gold;

@@ -24,7 +24,24 @@ add_filter( 'mce_buttons_2', 'll_new_mce_button' );
 function ll_format_tinymce( $data ) {
   $style_formats = array(
     array(
-      'title'    => 'Heading Sizes',
+      'title'    => 'Font Families',
+      'items'  => array(
+        array(
+          'title'    => 'Gotham',
+          'classes'  => 'gotham',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Trade Gothic',
+          'classes'  => 'trade-gothic',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+      ),
+    ),
+    array(
+      'title'    => 'Font Sizes',
       'items'  => array(
         array(
           'title'    => 'Heading 0',
@@ -65,6 +82,47 @@ function ll_format_tinymce( $data ) {
         array(
           'title'    => 'Heading 6',
           'classes'  => 'h6',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Large',
+          'classes'  => 'text-large',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => 'span'
+        ),
+        array(
+          'title'    => 'Small',
+          'classes'  => 'text-small',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => 'span'
+        ),
+      ),
+    ),
+    array(
+      'title'    => 'Font Cases',
+      'items'  => array(
+        array(
+          'title'    => 'Default',
+          'classes'  => 'text-default',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Uppercase',
+          'classes'  => 'text-uppercase',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Lowercase',
+          'classes'  => 'text-lowercase',
+          'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
+          'wrapper'  => false
+        ),
+        array(
+          'title'    => 'Capitalize',
+          'classes'  => 'text-capitalize',
           'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd',
           'wrapper'  => false
         ),

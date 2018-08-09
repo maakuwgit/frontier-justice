@@ -109,6 +109,37 @@
                     "min": "",
                     "max": ""
                 },
+                "5b576fda777e9": {
+                    "key": "5b576fda777e9",
+                    "name": "call-to-action",
+                    "label": "Call-to-Action",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b576fda777ea",
+                            "label": "Call-to-Action",
+                            "name": "call-to-action",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b4e2549ce84f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5b4e5635adf3f": {
                     "key": "5b4e5635adf3f",
                     "name": "icon-grid",
@@ -140,16 +171,16 @@
                     "min": "",
                     "max": ""
                 },
-                "5b576fda777e9": {
-                    "key": "5b576fda777e9",
-                    "name": "call-to-action",
-                    "label": "Call-to-Action",
+                "5b6ca3daddbd7": {
+                    "key": "5b6ca3daddbd7",
+                    "name": "inline-form",
+                    "label": "Inline Form",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b576fda777ea",
-                            "label": "Call-to-Action",
-                            "name": "call-to-action",
+                            "key": "field_5b6ca3daddbd8",
+                            "label": "Inline Form",
+                            "name": "inline-form",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -160,7 +191,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5b4e2549ce84f"
+                                "group_5b6ca34f05dd7"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -204,14 +235,14 @@
                 },
                 "5b4e572685a30": {
                     "key": "5b4e572685a30",
-                    "name": "lr-w-gradient",
-                    "label": "Left\/Right Images w\/ Gradient",
+                    "name": "lr-w-background",
+                    "label": "Left\/Right Content w\/ Background",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5b4e572685a31",
-                            "label": "Left\/Right Image w\/ Gradient",
-                            "name": "lr-w-gradient",
+                            "label": "Left\/Right Content w\/ Background",
+                            "name": "lr-w-background",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -469,5 +500,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1533748564
+    "modified": 1533846518
 }

@@ -1,0 +1,115 @@
+/**
+ * lr-w-background Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-lr-w-background {
+  position: relative;
+  @extend %section-padding;
+  background-color: $white;
+  padding-top: $padding-small;
+
+  &.lefty {
+
+    .lr-w-background__content {
+      order: 2;
+      margin-left: auto;
+      margin-right: 0;
+      padding-left: $grid-gutter-width * 2;
+      padding-right: 0;
+    }
+
+  }
+
+  .lr-w-background__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .lr-w-background__content {
+    position: relative;
+    z-index: 1;
+    padding-right: $grid-gutter-width * 2;
+    padding-left: 0;
+
+    ul {
+      list-style: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      margin-bottom: rem-calc(24);
+    }
+
+    h1, h2, h3, h4, h5, h6, p, li, dt, dd, time {
+      color: $white;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: rem-calc(22);
+    }
+
+    li {
+      margin: rem-calc(4) auto;
+      padding-left: $grid-gutter-width;
+
+      &:before {
+        position: absolute;
+        content: '•';
+        margin-left: -1 * $grid-gutter-width;
+      }
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    [class*="btn"] {
+      @extend %open-sans;
+      display: inline-flex;
+      min-width: rem-calc(254);
+      margin-top: $padding-small;
+      margin-right: $padding-xsmall;
+      box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
+    }
+  }
+
+  @include screen-lg-up {
+
+    .lr-w-background__content {
+      min-height: rem-calc(397);
+      padding-top: $padding-large;
+      padding-bottom: $padding-large;
+
+      > * {
+        width: 100%;
+      }
+
+    }
+
+    [class*="btn"] {
+      margin-top: $padding-medium;
+      margin-right: $padding-small;
+    }
+
+  }
+
+  @include screen-xl-up {
+    min-height: 40vw;
+
+    > .container {
+      min-height: 40vw;
+    }
+  }
+}

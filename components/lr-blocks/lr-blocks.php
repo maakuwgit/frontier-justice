@@ -46,18 +46,11 @@ $id = $component_args['id'];
 $style              = $component_data['style'];
 $image              = $component_data['image'];
 $content            = $component_data['content'];
-$has_bg             = $component_data['has_bg'];
-
-if( $has_bg ) {
-  $bg = 'periwinkle ';
-}else{
-  $bg = '';
-}
 
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
-<section class="ll-lr-blocks<?php echo ' ' . $bg . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
+<section class="ll-lr-blocks<?php echo ' ' . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
 
   <div class="container row stretch center">
 

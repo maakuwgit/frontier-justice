@@ -7,9 +7,16 @@
 */
 
 $defaults = [
+  'form_id' => false,
+];
+
+$args = [
+  'id'      => uniqid('inline-form-'),
+  'classes' => false,
 ];
 
 $component_data = ll_parse_args( $component_data, $defaults );
+$component_args = ll_parse_args( $component_args, $args );
 ?>
 
 <?php
@@ -19,7 +26,8 @@ $component_data = ll_parse_args( $component_data, $defaults );
  * @var array
  * @see args['classes']
  */
-$classes        = $component_args['classes'] ?: array();
+$classes        = $component_args['classes'];
+if( $classes ) $classes = ' ' . implode( " ", $classes );
 
 /**
  * ID to apply to the main component container.
@@ -27,10 +35,13 @@ $classes        = $component_args['classes'] ?: array();
  * @var array
  * @see args['id']
  */
-$component_id   = $component_args['id'];
+$id      = $component_args['id'];
+$form_id = $component_data['form_id'];
 ?>
 
-<?php if ( ll_empty( $component_data ) ) return; ?>
-<div class="ll-inline-form <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="inline-form">
+<?php if ( ll_empty( $component_data ) || !is_plugin_active( 'gravityforms/gravityforms.php' ) ) return; ?>
+<div class="ll-inline-form<?php echo $classes; ?>"<?php echo ' id="'.$id.'"'; ?> data-component="inline-form">
+
+  <?php gravity_form( $form_id, true, true ); ?>
 
 </div>

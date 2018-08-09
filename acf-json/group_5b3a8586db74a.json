@@ -3,13 +3,40 @@
     "title": "Synopsis",
     "fields": [
         {
+            "key": "field_5b6c9376d3e91",
+            "label": "Show Synopsis",
+            "name": "has_synopsis",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
             "key": "field_5b6c74aab8a66",
             "label": "Theme",
             "name": "synopsis_theme",
             "type": "button_group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c9376d3e91",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -31,7 +58,15 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c9376d3e91",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "33.33334",
                 "class": "",
@@ -50,7 +85,15 @@
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c9376d3e91",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "66.6666",
                 "class": "",
@@ -69,7 +112,15 @@
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c9376d3e91",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "100",
                 "class": "btn",
@@ -114,6 +165,18 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/template-dark.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "posts_page"
+            }
         ]
     ],
     "menu_order": 2,
@@ -124,5 +187,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Two columns with a headline on the left and copy on the right. One row of buttons (optional). All elements justified\/aligned center",
-    "modified": 1533834484
+    "modified": 1533842363
 }

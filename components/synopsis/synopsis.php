@@ -42,6 +42,7 @@ $id            = ' id="' . $component_args['id'] . '"';
 $heading     = $component_data['heading'];
 $content     = $component_data['content'];
 $links       = $component_data['links'];
+
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
@@ -71,14 +72,14 @@ $links       = $component_data['links'];
     </div><!-- .row.synopsis__wrapper -->
 
     <?php if( $links ) : ?>
-      <nav class="synopsis__nav row">
 
+      <nav class="synopsis__nav row">
       <?php if( $links['button'] ) : ?>
         <a class="btn--smoke" href="<?php echo $links['button']['url']; ?>">
           <?php echo $links['button']['title']; ?>
         </a>
 
-      <?php else: ?>
+      <?php elseif( is_array($button) ): ?>
 
         <?php foreach( $links as $button ) : ?>
         <a class="btn--smoke" href="<?php echo $button['url']; ?>">

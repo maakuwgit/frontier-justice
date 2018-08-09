@@ -9,9 +9,10 @@
 .ll-prefooter {
   position: relative;
   overflow: hidden;
-  background: $smoke url(../img/background__prefooter.png) center no-repeat;
+  background-color: $smoke;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
-  @include gradient-overlay;
 
   .container {
     min-height: 75vw;
@@ -48,6 +49,7 @@
 
     button, *[class*="btn"] {
       @extend %open-sans;
+      @extend %btn--shadow;
       min-width: rem-calc(254);
     }
   }

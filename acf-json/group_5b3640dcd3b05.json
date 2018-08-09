@@ -124,6 +124,67 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5b6c8f28cd7f1",
+            "label": "Background",
+            "name": "prefooter_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6b4951043f8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5b6c90d2fb463",
+            "label": "Overlay",
+            "name": "prefooter_overlay_strength",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6b4951043f8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": 1,
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1"
         }
     ],
     "location": [
@@ -177,5 +238,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Centered text with a background image, optional button",
-    "modified": 1533757859
+    "modified": 1533845686
 }

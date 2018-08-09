@@ -165,6 +165,8 @@ if( $image ) {
   <?php endif; ?>
 
   <?php if( $button ) : ?>
+
+    <?php if( $button['link'] ) : ?>
     <div class="hero__button col col-xs-10of12 col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
 
       <a class="<?php echo $button['button_type'] . ( $icon ? ' has_icon' : '' );?>" href="<?php echo $button['link']['url'];?>"><?php echo $button['link']['title'];?>
@@ -179,6 +181,7 @@ if( $image ) {
 
     </div>
     <!-- .hero__button -->
+    <?php endif; ?>
 
   <?php endif; ?>
 

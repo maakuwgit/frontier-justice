@@ -46,8 +46,7 @@ if( have_rows( 'components' ) ) {
         $block = array(
           'style'       => get_sub_field('lr_blocks_style'),
           'image'       => get_sub_field('lr_blocks_image'),
-          'content'     => get_sub_field('lr_blocks_content'),
-          'has_bg'      => get_sub_field('lr_blocks_background')
+          'content'     => get_sub_field('lr_blocks_content')
         );
 
         $components .= ll_include_component(
@@ -57,17 +56,17 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'lr-w-gradient' :
+      case 'lr-w-background' :
         //Home
         $block = array(
-          'style'       => get_sub_field('lr_w_gradient_style'),
-          'image'       => get_sub_field('lr_w_gradient_image'),
-          'content'     => get_sub_field('lr_w_gradient_content'),
-          'has_bg'      => get_sub_field('lr_w_gradient_background')
+          'style'       => get_sub_field('lr_w_background_style'),
+          'image'       => get_sub_field('lr_w_background_image'),
+          'overlay'     => get_sub_field('lr_w_background_overlay_strength'),
+          'content'     => get_sub_field('lr_w_background_content'),
         );
 
         $components .= ll_include_component(
-          'lr-w-gradient',
+          'lr-w-background',
           $block,
           array(),
           true
@@ -111,6 +110,19 @@ if( have_rows( 'components' ) ) {
         $components .= ll_include_component(
           'image-slider',
           $slides,
+          array(),
+          true
+        );
+      break;
+      case 'inline-form' :
+        //Event Space
+        $form = array(
+          'form_id' => get_sub_field('inline-form_id')
+        );
+
+        $components .= ll_include_component(
+          'inline-form',
+          $form,
           array(),
           true
         );

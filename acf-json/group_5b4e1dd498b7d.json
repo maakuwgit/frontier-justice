@@ -1,11 +1,11 @@
 {
     "key": "group_5b4e1dd498b7d",
-    "title": "Left \/ Right Image w\/ Gradient",
+    "title": "Left \/ Right Content w\/ Background",
     "fields": [
         {
             "key": "field_5b4e1dd4a02a5",
             "label": "Style",
-            "name": "lr_w_gradient_style",
+            "name": "lr_w_background_style",
             "type": "button_group",
             "instructions": "",
             "required": 0,
@@ -16,18 +16,18 @@
                 "id": ""
             },
             "choices": {
-                "lefty": "Left Side Image",
-                "righty": "Right Side Image"
+                "righty": "Right Side Text",
+                "lefty": "Left Side Text"
             },
             "allow_null": 0,
-            "default_value": "",
+            "default_value": "righty",
             "layout": "vertical",
             "return_format": "value"
         },
         {
             "key": "field_5b4e1dd4a02eb",
             "label": "Image",
-            "name": "lr_w_gradient_image",
+            "name": "lr_w_background_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -50,9 +50,9 @@
         },
         {
             "key": "field_5b4e1dd4a0369",
-            "label": "Background Color",
-            "name": "lr_w_gradient_background",
-            "type": "true_false",
+            "label": "Overlay Strength",
+            "name": "lr_w_background_overlay_strength",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -61,16 +61,18 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Color",
-            "ui_off_text": "Transparent"
+            "default_value": "0.3",
+            "placeholder": "0.3",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 1,
+            "step": "0.1"
         },
         {
             "key": "field_5b4e1dd4a032b",
             "label": "Content",
-            "name": "lr_w_gradient_content",
+            "name": "lr_w_background_content",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -103,6 +105,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "Similar to the Left\/Right Block, only with a white-to-transparent gradient on the left overlaying the image.",
-    "modified": 1532435421
+    "description": "Similar to the Left\/Right Block, only with an image background instead of floating left\/right",
+    "modified": 1533845720
 }

@@ -21,7 +21,7 @@
                 "3": "4-up"
             },
             "allow_null": 0,
-            "default_value": 3,
+            "default_value": 4,
             "layout": "horizontal",
             "return_format": "value"
         },
@@ -235,5 +235,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "A simple grid of icons with captions. Icons are all clones of the preset list All Icons component",
-    "modified": 1533834113
+    "modified": 1533842422
 }
