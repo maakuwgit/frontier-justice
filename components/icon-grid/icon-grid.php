@@ -7,6 +7,7 @@
 */
 
 $defaults = [
+  'layout'       => 4,
   'heading'      => false,
   'content'      => false,
   'icons'        => false,
@@ -39,9 +40,12 @@ $id            = ' id="' . $component_args['id'] . '"';
 /**
  * ACF values pulled into the component from the components.php partial.
  */
-$heading       = $component_data['heading'];
-$content       = $component_data['content'];
+$heading      = $component_data['heading'];
+$content      = $component_data['content'];
 $icons        = $component_data['icons'];
+$layout       = $component_data['layout'];
+
+$layout = ' col-md-'.$layout.'of12 col-lg-'.$layout.'of12 col-xl-'.$layout.'of12';
 
 ?>
 
@@ -62,54 +66,56 @@ $icons        = $component_data['icons'];
 
 <?php if( $icons ) : ?>
 
-  <div class="container">
+  <div class="container row centered center">
 
-    <ul class="icon-grid__icons row stretch">
+    <div class="icon-grid__wrapper">
 
-    <?php
-      foreach( $icons as $block ) :
+      <ul class="icon-grid__icons row stretch">
 
-        $icon      = $block['icon'];
-        $title     = $block['title'];
-        $caption   = $block['caption'];
+      <?php foreach( $icons as $block ) : ?>
+        <?php
+          $icon      = $block['icon'];
+          $title     = $block['title'];
+          $caption   = $block['caption'];
+        ?>
+        <li class="icon-grid__block col<?php echo $layout; ?>">
 
-    ?>
-      <li class="icon-grid__block col col-md-4of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12">
+        <?php if( $title || $caption ) : ?>
+          <div class="icon-grid__block__content">
 
-      <?php if( $title || $caption ) : ?>
-        <div class="icon-grid__block__content">
+          <?php if( $icon ) : ?>
+            <div class="icon-grid__block__icon">
+              <svg class="icon <?php echo $icon; ?>">
+                <use xlink:href="#<?php echo $icon; ?>"></use>
+              </svg><!-- .icon.icon-<?php echo $icon; ?> -->
+            </div><!-- .icon-grid__block -->
+          <?php endif; ?>
 
-        <?php if( $icon ) : ?>
-          <div class="icon-grid__block__icon">
-            <svg class="icon <?php echo $icon; ?>">
-              <use xlink:href="#<?php echo $icon; ?>"></use>
-            </svg><!-- .icon.icon-<?php echo $icon; ?> -->
-          </div><!-- .icon-grid__block -->
-        <?php endif; ?>
+          <?php if( $title ) : ?>
+            <div class="icon-grid__block__title">
+              <h4><?php echo $title; ?></h4>
+            </div>
+            <!-- .icon-grid__block__title -->
+          <?php endif; ?>
 
-        <?php if( $title ) : ?>
-          <div class="icon-grid__block__title">
-            <h4><?php echo $title; ?></h4>
+          <?php if( $caption ) : ?>
+            <div class="icon-grid__block__caption">
+              <?php echo format_text($caption); ?>
+            </div>
+            <!-- .icon-grid__block__caption -->
+          <?php endif; ?>
+
           </div>
-          <!-- .icon-grid__block__title -->
+          <!-- .icon-grid__content -->
         <?php endif; ?>
 
-        <?php if( $caption ) : ?>
-          <div class="icon-grid__block__caption">
-            <?php echo format_text($caption); ?>
-          </div>
-          <!-- .icon-grid__block__caption -->
-        <?php endif; ?>
+        </li><!-- .icon-grid__item -->
 
-        </div>
-        <!-- .icon-grid__content -->
-      <?php endif; ?>
+      <?php endforeach; ?>
 
-      </li><!-- .icon-grid__item -->
+      </ul><!-- .icon-grid__items -->
 
-    <?php endforeach; ?>
-
-    </ul><!-- .icon-grid__items -->
+    </div>
 
   </div><!-- .container -->
 <?php endif; ?>

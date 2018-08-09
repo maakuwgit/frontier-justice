@@ -190,14 +190,20 @@ function ll_format_tinymce( $data ) {
             'wrapper'  => false
           ),
           array(
-            'title'    => 'Ebony',
-            'classes'  => 'ebony',
+            'title'    => 'Coal',
+            'classes'  => 'coal',
             'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
             'wrapper'  => false
           ),
           array(
             'title'    => 'Battleship',
             'classes'  => 'battleship',
+            'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
+            'wrapper'  => false
+          ),
+          array(
+            'title'    => 'Ebony',
+            'classes'  => 'ebony',
             'selector' => 'h1, h2, h3, h4, h5, h6, p, a, span, li, time, dt, dd, address, code',
             'wrapper'  => false
           ),
@@ -251,8 +257,9 @@ function ll_format_tinymce( $data ) {
 
   $custom_colours = '
         "000000", "Black",
-        "1f1f1f", "Ebony",
+        "202020", "Ebony",
         "2D2D2D", "Battleship",
+        "1f1f1f", "Ebony",
         "4A4A4A", "Smoke",
         "BABABA", "Grey",
         "AA9767", "Gold",

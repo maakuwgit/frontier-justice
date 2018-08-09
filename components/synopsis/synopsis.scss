@@ -16,11 +16,24 @@
   }
 
   .synopsis__header {
-    @extend %h3;
+    @extend %h2;
   }
 
   .synopsis__description {
-    margin-right: auto;
+
+    p {
+      margin-top: 0;
+    }
+
+  }
+
+  .synopsis__nav {
+    margin-top: $padding-medium * 0.75;
+
+    [class*="btn"]{
+      @extend %open-sans;
+      box-shadow: 0 #{rem-calc(4)} #{rem-calc(14)} 0 rgba($black, 0.3);
+    }
   }
 
   @include screen-sm {
@@ -32,8 +45,14 @@
   @include screen-md-up {
     margin-bottom: $padding-medium;
 
-    .synopsis__description {
-      padding-right: 0;
+
+    .synopsis__nav {
+      margin-top: $padding-large * 0.75;
+
+      [class*="btn"]{
+        min-width: rem-calc(300);
+      }
     }
+
   }
 }

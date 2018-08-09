@@ -83,7 +83,7 @@
     @if $invert == false {
       bottom: 0;
     } @else {
-      bottom: -60px;
+      bottom: rem-calc(-60);
       transform:rotate(180deg);
     }
 
@@ -91,7 +91,7 @@
     z-index: 1;
     content: '';
     width: 100%;
-    height: 60px;
+    height: rem-calc(60);
     background-size: cover;
     background-image: url(../img/graphic__ragged-edge-#{$color}.png);
   }
@@ -106,7 +106,7 @@
     @if $invert == false {
       top: 0;
     } @else {
-      top: -60px;
+      top: rem-calc(-60);
       transform: rotate(0);
     }
 
@@ -114,7 +114,7 @@
     z-index: 1;
     content: '';
     width: 100%;
-    height: 60px;
+    height: rem-calc(60);
     background-size: cover;
     background-image: url(../img/graphic__ragged-edge-#{$color}.png);
   }

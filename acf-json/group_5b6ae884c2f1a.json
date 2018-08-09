@@ -4,15 +4,15 @@
     "fields": [
         {
             "key": "field_5b6ae88c8dac1",
-            "label": "Options",
+            "label": "Styles",
             "name": "button_type",
             "type": "button_group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "btn",
                 "id": ""
             },
             "choices": {
@@ -46,5 +46,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1533733380
+    "modified": 1533826636
 }

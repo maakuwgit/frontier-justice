@@ -7,14 +7,16 @@
  */
 
 .ll-icon-grid {
+  position: relative;
   @extend %section-padding;
+  @include ragged-after('s',true);
+  background-color: $battleship;
 
   .icon-grid__heading {
     @extend %h3;
     margin-left: auto;
     margin-right: auto;
     font-weight: $text-book;
-    color: $ebony;
   }
 
   .icon-grid__content {
@@ -32,36 +34,58 @@
   }
 
   .icon-grid__block {
-    margin-top: $padding-xsmall;
-    margin-bottom: $padding-xsmall;
+    margin-top: $padding-medium;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+
+    p, time, li, dd {
+      color: $grey;
+    }
+
+    li {
+      padding-top: #{rem-calc(6)};
+      padding-bottom: #{rem-calc(6)};
+    }
   }
 
   .icon-grid__block__icon {
-    @extend %coin;
-    margin-bottom: rem-calc(16);
-    color: $gold;
-    background-color: $ivory;
+
+    .icon {
+      @extend %coin;
+    }
+
   }
 
   .icon-grid__block__title {
-    h2, h3, h4 {
+    h2, h3, h4, h5, h6 {
+      @extend %h6;
       margin-bottom: rem-calc(10);
-      color: $gold;
     }
   }
 
   .icon-grid__block__caption {
 
     p {
+      @extend %small;
       margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
     }
 
-    :last-child {
-      margin-bottom: 0;
-    }
   }
 
   @include screen-lg-up {
+
+    .icon-grid__wrapper {
+      width: 83.3333333333%;
+      max-width: 83.3333333333%;
+      flex: .8333333333 1 auto;
+    }
 
     .icon-grid__block {
       margin-top: $padding-small;

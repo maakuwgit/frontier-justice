@@ -1,6 +1,6 @@
 {
     "key": "group_5b4610a45ca4e",
-    "title": "Icons List",
+    "title": "All Icons",
     "fields": [
         {
             "key": "field_5b4610ab632ad",
@@ -11,14 +11,19 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
-                "class": "",
+                "width": "50",
+                "class": "icon",
                 "id": ""
             },
             "choices": {
+                "icon-bison": "Bison",
+                "icon-calendar": "Calendar",
                 "icon-check": "Check Mark",
                 "icon-crosshairs": "Crosshairs",
                 "icon-location": "Location",
+                "icon-phone": "Phone",
+                "icon-search": "Search",
+                "icon-timer": "Timer",
                 "icon-user": "User",
                 "icon-wifi": "Wifi"
             },
@@ -48,5 +53,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "This houses all the icon options. Other 'Icon' fields are clones of this",
-    "modified": 1533820055
+    "modified": 1533826656
 }

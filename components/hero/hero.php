@@ -44,14 +44,23 @@ if( $classes ) $classes = ' ' . implode( " ", $classes );
  */
 $id = $component_args['id'];
 
-$supertitle      = $component_data['supertitle']['text'];
-$supertitle_tag  = $component_data['supertitle']['tag'];
-$price           = $component_data['supertitle']['price'];
-$suffix          = $component_data['supertitle']['suffix'];
-$heading         = $component_data['heading']['text'];
-$heading_tag     = $component_data['heading']['tag'];
+if( $component_data['supertitle'] ) {
+  $supertitle      = $component_data['supertitle']['text'];
+  $supertitle_tag  = $component_data['supertitle']['tag'];
+  $price           = $component_data['supertitle']['price'];
+  $suffix          = $component_data['supertitle']['suffix'];
+}else{
+  $supertitle = false;
+}
+
+if( $component_data['heading'] ) {
+  $heading         = $component_data['heading']['text'];
+  $heading_tag     = $component_data['heading']['tag'];
+}
+
 $content         = $component_data['content'];
 $button          = $component_data['button'];
+
 if( $button ) {
   $icon            = $component_data['button']['icon'];
 

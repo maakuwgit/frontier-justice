@@ -115,12 +115,8 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b {
-  font-weight: $text-med;
-}
-
-strong {
-  font-weight: $text-black;
+b, strong {
+  font-weight: $text-bold;
 }
 
 /**

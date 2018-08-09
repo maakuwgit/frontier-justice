@@ -161,8 +161,9 @@
       min-width: initial;
       margin: auto;
       padding: #{rem-calc(2)} #{rem-calc(10)};
-      text-transform: uppercase;
+      @extend %open-sans;
       font-size: rem-calc(10);
+      text-transform: uppercase;
       line-height: line-calc(20,10);
       background-color: $gold;
 
@@ -279,7 +280,7 @@
     .gform_footer {
 
       input[type=submit].gform_button.button {
-        padding: #{rem-calc(4)} #{rem-calc(22)} #{rem-calc(1)};
+        padding: #{rem-calc(2.5)} #{rem-calc(22)};
         font-size: rem-calc(14);
         line-height: line-calc(28,14);
       }

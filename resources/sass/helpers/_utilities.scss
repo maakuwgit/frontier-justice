@@ -289,11 +289,14 @@ a, address, dt, dd, h1, h2, h3, h4, h5, h6, li, p, span, small, td, th, time, ul
   &.black {
     color: $black;
   }
-  &.ebony {
-    color: $ebony;
+  &.coal {
+    color: $coal;
   }
   &.battleship {
     color: $battleship;
+  }
+  &.ebony {
+    color: $ebony;
   }
   &.smoke {
     color: $smoke;
@@ -322,11 +325,14 @@ aside, article, main, div, header, footer, section, nav, main, menu, code, hr {
   &.black {
     background-color: $black;
   }
-  &.ebony {
-    background-color: $ebony;
+  &.coal {
+    background-color: $coal;
   }
   &.battleship {
     background-color: $battleship;
+  }
+  &.ebony {
+    background-color: $ebony;
   }
   &.smoke {
     background-color: $smoke;

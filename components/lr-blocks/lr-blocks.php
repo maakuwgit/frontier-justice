@@ -59,28 +59,24 @@ if( $has_bg ) {
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-lr-blocks<?php echo ' ' . $bg . $style . implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="lr-blocks">
 
-  <div class="container row centered center">
+  <div class="container row stretch center">
 
   <?php if( $content ) : ?>
-    <div class="lr-blocks__content col col-md-6of12 col-lg-5of12 col-xl-5of12 col-xxl-5of12">
+    <div class="lr-blocks__content col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12">
       <?php echo $content; ?>
     </div><!-- .lr-block__content -->
   <?php endif; ?>
 
   <?php if( $image ) : ?>
-    <div class="lr-blocks__spacer col col-md-6of12 col-lg-7of12 col-xl-7of12 col-xxl-7of12"></div><!-- .lr-blocks__spacer -->
+    <figure class="lr-blocks__figure col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12" data-backgrounder>
+
+      <div class="lr-blocks__feature feature">
+      <?php echo ll_format_image($image); ?>
+      </div><!-- .lr-blocks__feature.feature -->
+
+    </figure><!-- .lr-blocks__figure -->
   <?php endif; ?>
 
   </div>
-
-<?php if( $image ) : ?>
-  <figure class="lr-blocks__figure col col-md-6of12 col-lg-6of12 col-xl-6of12 col-xxl-6of12" data-backgrounder>
-
-    <div class="lr-blocks__feature feature">
-    <?php echo ll_format_image($image); ?>
-    </div><!-- .lr-blocks__feature.feature -->
-
-  </figure><!-- .lr-blocks__figure -->
-<?php endif; ?>
 
 </section>

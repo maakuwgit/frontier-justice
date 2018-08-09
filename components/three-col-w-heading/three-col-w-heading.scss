@@ -54,11 +54,8 @@
 
   }
 
-  .icon-bison {
-    width: rem-calc(50);
-    height: rem-calc(50);
-    fill: $gold;
-    margin-bottom: $padding-xsmall;
+  .icon {
+    @extend %coin;
   }
 
   @include screen-sm-only {
@@ -96,10 +93,6 @@
     .three-col-w-heading__content {
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .icon-bison {
-      margin-bottom: $padding-small;
     }
 
   }

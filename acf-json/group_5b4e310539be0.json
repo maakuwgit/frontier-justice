@@ -3,13 +3,63 @@
     "title": "Icon Grid",
     "fields": [
         {
+            "key": "field_5b6c7019f8537",
+            "label": "Layout",
+            "name": "icon_grid_layout",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "6": "2-up",
+                "4": "3-up",
+                "3": "4-up"
+            },
+            "allow_null": 0,
+            "default_value": 3,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5b6c70cfa7a61",
+            "label": "Is there a headline?",
+            "name": "is_there_a_headline",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
             "key": "field_5b4e310542c3d",
             "label": "Heading",
             "name": "icon_grid_heading",
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c70cfa7a61",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -67,7 +117,15 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b6c70cfa7a61",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -81,7 +139,7 @@
         },
         {
             "key": "field_5b4e310542cbd",
-            "label": "Icons",
+            "label": "Icon Block",
             "name": "icon_grid_icons",
             "type": "repeater",
             "instructions": "",
@@ -96,7 +154,7 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "+ Image",
+            "button_label": "+ Block",
             "sub_fields": [
                 {
                     "key": "field_5b4e310556c54",
@@ -176,6 +234,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
-    "description": "A simple grid of icons with captions. Icons are all clones of the preset list Icons List component",
-    "modified": 1532321944
+    "description": "A simple grid of icons with captions. Icons are all clones of the preset list All Icons component",
+    "modified": 1533834113
 }

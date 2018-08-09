@@ -47,6 +47,7 @@
     margin-top: rem-calc(30);
 
     button, *[class*="btn"] {
+      @extend %open-sans;
       min-width: rem-calc(254);
     }
   }

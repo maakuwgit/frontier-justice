@@ -27,6 +27,14 @@
 
   }
 
+  @include screen-xl-up {
+
+    body.admin-bar.logged-in & {
+      margin-top: rem-calc(20);
+    }
+
+  }
+
   @include screen-md-up {
 
     body.admin-bar & {

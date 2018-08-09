@@ -1,6 +1,8 @@
 /**
  * Typography
  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
 @font-face {
     font-family: 'Gotham';
     src: url('../fonts/Gotham-Black.otf');
@@ -61,25 +63,23 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'TradeGothicLTStd';
-    src: url('../fonts/TradeGothicLTStd-Cn18.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 %gotham {
   font-family: $font-family;
 }
 
 .trade-gothic {
-  @extend %trade-gothic;
+  @extend %open-sans;
 }
 
-%trade-gothic {
+%open-sans {
   font-family: $font-family-alt;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-shadow: 0 0 0.5px white;
+}
+
+.open-sans {
+  @extend %open-sans;
 }
 
 .gotham {
