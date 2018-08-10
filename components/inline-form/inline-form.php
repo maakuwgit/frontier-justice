@@ -8,6 +8,7 @@
 
 $defaults = [
   'form_id' => false,
+  'image'   => false
 ];
 
 $args = [
@@ -37,11 +38,32 @@ if( $classes ) $classes = ' ' . implode( " ", $classes );
  */
 $id      = $component_args['id'];
 $form_id = $component_data['form_id'];
+$image   = $component_data['image'];
 ?>
 
 <?php if ( ll_empty( $component_data ) || !is_plugin_active( 'gravityforms/gravityforms.php' ) ) return; ?>
-<div class="ll-inline-form<?php echo $classes; ?>"<?php echo ' id="'.$id.'"'; ?> data-component="inline-form">
+<section class="ll-inline-form<?php echo $classes; ?>"<?php echo ' id="'.$id.'"'; ?> data-component="inline-form">
 
-  <?php gravity_form( $form_id, true, true ); ?>
+  <div class="container row between">
 
-</div>
+  <?php if ($image ) : ?>
+
+    <div class="inline-form__feature col col-md-6of12 col-lg-5of12 col-xl-5of12">
+      <?php
+      if( is_array($image) ) {
+        echo ll_format_image($image);
+      }else{
+        echo $image;
+      } ?>
+    </div><!-- .inline-form__feature.col -->
+
+  <?php endif; ?>
+
+    <div class="col col-md-6of12 col-offset-lg-7of12 col-lg-5of12 col-offset-lg-7of12 col-xl-5of12">
+      <?php gravity_form( $form_id, true, true ); ?>
+    </div>
+
+  </div>
+  <!-- .container.row.betwee -->
+
+</section>

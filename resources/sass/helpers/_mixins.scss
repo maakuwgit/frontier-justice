@@ -165,10 +165,11 @@
            #{rem-calc(14)}
            #{rem-calc(18)};
   border: #{rem-calc(1)} solid $grey;
+  border-radius: 0;
   font-size: rem-calc(15);
   font-weight: $text-book;
   color: $grey;
-  line-height: line-calc(15,28);
+  line-height: line-calc(28,28);
   background-color: $white;
   box-shadow: 0 #{rem-calc(2)} #{rem-calc(6)} 0 rgba($black, 0.12);
 

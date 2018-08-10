@@ -7,5 +7,100 @@
  */
 
 .ll-inline-form {
+  position: relative;
+  @extend %section-padding;
+  @include ragged-after('s',true);
+  background-color: $battleship;
 
+  .gform_heading,
+  .gform_footer {
+    margin-left: $grid-gutter-width/2;
+    margin-right: $grid-gutter-width/2;
+  }
+
+  .gform_title,
+  .gform_description {
+    color: $white;
+  }
+
+  .gform_title {
+    @extend %h0;
+    position: absolute;
+    left: 15%;
+    width: 33.33334%;
+    margin-top: rem-calc(150);
+    letter-spacing: 4.65px;
+    text-align: right;
+  }
+
+  .gform_description {
+    @extend %h5;
+    display: flex;
+    margin-bottom: $padding-large * 0.75;
+  }
+
+  .gfield {
+    position: relative;
+    padding-top: $padding-xsmall/2;
+    padding-bottom: $padding-xsmall/2;
+
+    input[type=date],
+    input[type=email],
+    input[type=number],
+    input[type=tel],
+    input[type=text] {
+      padding-right: rem-calc(10);
+      padding-left: rem-calc(10);
+    }
+
+    .gfield_required {
+      float: left;
+      margin-right: rem-calc(2);
+    }
+
+  }
+
+  .gfield_label {
+    position: absolute;
+    top: rem-calc(16);
+    left: rem-calc(22);
+    margin-top: 0;
+    color: $aluminum;
+  }
+
+  .gform_body {
+
+    .gform_fields {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+
+      input {
+        border: none;
+
+        @include placeholder-text {
+          font-weight: $text-book;
+          line-height: 1;
+          color: $aluminum;
+        }
+      }
+    }
+
+  }
+
+  .gform_button {
+    @extend %btn--gold;
+    @extend %open-sans;
+    width: 100%;
+    margin-top: $padding-small;
+    text-transform: uppercase;
+  }
+
+  @include screen-md-up {
+
+    .inline-form__feature {
+      position: absolute;
+    }
+
+  }
 }

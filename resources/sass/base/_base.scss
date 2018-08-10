@@ -129,9 +129,11 @@ img {
 }
 
 input {
-  &[type="text"],
   &[type="date"],
-  &[type="email"] {
+  &[type="email"],
+  &[type="number"],
+  &[type="tel"],
+  &[type="text"] {
    @include input_base;
   }
 
@@ -166,10 +168,11 @@ main {
 
 select {
   @include input_base;
-  padding-right: rem-calc(16);
-  background-image: url('../img/svg/chevron-down.svg');
+  padding-right: rem-calc(36);
+  padding-left: rem-calc(8);
+  background-image: url('../img/svg/chevron-down.svg'), url('../img/svg/chevron-down-g.svg');
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: calc(100% - #{rem-calc(10)}) center;
   background-size: rem-calc(20);
   @include screen-lg-up {
     &:hover {

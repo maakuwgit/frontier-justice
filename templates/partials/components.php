@@ -117,6 +117,7 @@ if( have_rows( 'components' ) ) {
       case 'inline-form' :
         //Event Space
         $form = array(
+          'image'   => get_sub_field('inline-form_image'),
           'form_id' => get_sub_field('inline-form_id')
         );
 
