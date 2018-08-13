@@ -24,8 +24,15 @@
 
   .teaser__subheadline {
     padding-top: $padding-medium * 0.75;
-    @extend %h4;
     font-weight: $text-book;
+  }
+
+  h2.teaser__subheadline {
+    @extend %h4;
+  }
+
+  h3.teaser__subheadline {
+    @extend %h5;
   }
 
   .teaser__image0 {
@@ -95,6 +102,12 @@
       background-size: rem-calc(40);
     }
 
+    .teaser__image1 {
+      img {
+        margin-bottom: -1 * $padding-medium;
+      }
+    }
+
   }
 
   @include screen-md-up {
@@ -103,6 +116,10 @@
       + .teaser__headline {
         margin-top: -1.25 * $padding-large;
       }
+    }
+
+    .teaser__headline {
+      margin-bottom: $padding-medium;
     }
 
     .teaser__subheadline {
@@ -132,6 +149,12 @@
       &:before {
         right: $padding-xsmall;
         left: $padding-xsmall;
+      }
+    }
+
+    .teaser__image1 {
+      img {
+        margin-bottom: -1 * $padding-large;
       }
     }
 

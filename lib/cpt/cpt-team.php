@@ -88,3 +88,17 @@ if ( ! function_exists('register_team_taxonomies') ) {
   add_action( 'init', 'register_team_taxonomies', 0 );
 
 }
+
+/*
+ * Show Custom Status if page is set as the activities page
+ */
+add_filter( 'display_post_states', 'll_team_post_state' );
+function ll_team_post_state( $states ) {
+  global $post;
+
+  $show_custom_state = $post->ID == get_field( 'team_archive_page', 'option' );
+  if ( $show_custom_state ) {
+    $states[] = __( 'Team Members Page' );
+  }
+  return $states;
+}

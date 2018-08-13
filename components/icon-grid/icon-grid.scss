@@ -81,10 +81,36 @@
 
   @include screen-lg-up {
 
-    .icon-grid__wrapper {
-      width: 83.3333333333%;
-      max-width: 83.3333333333%;
-      flex: .8333333333 1 auto;
+    .page-template-template-dark & {
+
+      .icon-bison {
+        width: rem-calc(60);
+        height: rem-calc(60);
+      }
+
+      .icon-grid__block__title {
+        margin-bottom: rem-calc(24);
+      }
+
+      .icon-grid__block__caption {
+
+        p {
+          font-size: rem-calc(16);
+          color: $white;
+        }
+
+      }
+
+    }
+
+    body:not(.page-template-template-dark) & {
+
+      .icon-grid__wrapper {
+        width: 83.3333333333%;
+        max-width: 83.3333333333%;
+        flex: .8333333333 1 auto;
+      }
+
     }
 
     .icon-grid__block {
