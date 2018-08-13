@@ -189,6 +189,24 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
+      case 'photo-stack-w-content' :
+        //Home, About
+        $stack = array(
+          'heading'     => get_sub_field('photo-stack_heading'),
+          'subheading'  => get_sub_field('photo-stack_subheading'),
+          'content'     => get_sub_field('photo-stack_content'),
+          'button'      => get_sub_field('photo-stack_button'),
+          'images'      => get_sub_field('photo-stack_images'),
+          'caption'     => get_sub_field('photo-stack_caption')
+        );
+
+        $components .= ll_include_component(
+          'photo-stack-w-content',
+          $stack,
+          array(),
+          true
+        );
+      break;
       case 'three-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(

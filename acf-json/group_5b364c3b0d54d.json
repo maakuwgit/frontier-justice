@@ -390,12 +390,43 @@
                 },
                 "5b364c9422e0d": {
                     "key": "5b364c9422e0d",
+                    "name": "photo-stack-w-content",
+                    "label": "Photo Stack w\/ Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b364cd2cc6c2",
+                            "label": "Photo Stack w\/ Content",
+                            "name": "photo-stack-w-content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b71f3e6c9502"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b71f4efb5c9a": {
+                    "key": "5b71f4efb5c9a",
                     "name": "synopsis",
                     "label": "Synopsis",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b364cd2cc6c2",
+                            "key": "field_5b71f4efb5c9b",
                             "label": "Synopsis",
                             "name": "synopsis",
                             "type": "clone",
@@ -500,5 +531,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1534181971
+    "modified": 1534194955
 }
