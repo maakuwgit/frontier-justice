@@ -58,6 +58,14 @@
     color: $white;
   }
 
+  @include screen-sm-up {
+
+    .container {
+      min-height: 50vh;
+    }
+
+  }
+
   @include screen-lg-up {
 
     .container {

@@ -219,6 +219,22 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
+      case 'teaser' :
+        //Home, About
+        $teaser = array(
+          'heading'     => get_sub_field('teaser_heading'),
+          'subheading'  => get_sub_field('teaser_subheading'),
+          'content'      => get_sub_field('teaser_content'),
+          'images'      => get_sub_field('teaser_images')
+        );
+
+        $components .= ll_include_component(
+          'teaser',
+          $teaser,
+          array(),
+          true
+        );
+      break;
       case 'two-col-w-heading' :
         //Home, About, all Locations
         $blocks = array(

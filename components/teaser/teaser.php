@@ -8,9 +8,9 @@
 
 $defaults = [
   'heading'     => false,
+  'subheading'  => false,
   'content'     => false,
-  'button'      => false,
-  'columns'     => false
+  'images'      => false
 ];
 
 $args = [
@@ -41,9 +41,9 @@ $id            = ' id="' . $component_args['id'] . '"';
  * ACF values pulled into the component from the components.php partial.
  */
 $heading     = $component_data['heading'];
+$subheading  = $component_data['subheading'];
 $content     = $component_data['content'];
-$button      = $component_data['button'];
-$columns     = $component_data['columns'];
+$images      = $component_data['images'];
 ?>
 
 <?php if ( ll_empty( $component_data ) ) return; ?>
@@ -51,68 +51,66 @@ $columns     = $component_data['columns'];
 
   <div class="container">
 
-    <div class="row teaser__wrapper start centered">
+    <div class="teaser__wrapper row between">
 
-      <div class="teaser__heading col col-sm-8of12 col-md-9of12 col-lg-9of12 col-xl-9of12 col-xxl-9of12">
+      <div class="teaser__heading col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <?php if( $images ) : ?>
+
+        <?php if( $images[0] ) : ?>
+
+          <div class="teaser__image0 col col-xs-8of12 col-sm-10of12 col-md-10of12 col-lg-10of12 col-xl-10of12">
+            <div class="feature">
+              <?php echo ll_format_image($images[0]['image']); ?>
+            </div>
+
+          </div><!-- .teaser__image0 -->
+
+        <?php endif; ?>
+
+      <?php endif; ?>
 
       <?php if( $heading ) : ?>
-        <h2 class="teaser__headline"><?php echo $heading; ?></h2>
+
+        <?php if( $heading['tag'] ) : ?>
+        <<?php echo $heading['tag']; ?> class="teaser__headline text-right"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
         <!-- .teaser__headline -->
+        <?php endif; ?>
+
+      <?php endif; ?>
+      </div>
+
+      <?php if( $subheading ) : ?>
+
+        <?php if( $subheading['tag'] ) : ?>
+        <<?php echo $subheading['tag']; ?> class="teaser__subheadline col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
+        <!-- .teaser__subheadline -->
+        <?php endif; ?>
+
       <?php endif; ?>
 
       <?php if( $content ) : ?>
 
-        <div class="teaser__description">
+        <div class="teaser__description col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
         <?php echo $content; ?>
         </div><!-- .teaser__description -->
 
       <?php endif; ?>
 
-      </div>
+        <div class="teaser__image1 text-right col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12  col-offset-xl-1of12 col-xl-5of12">
 
-      <?php if( $button ) : ?>
+      <?php if( $images ) : ?>
 
-      <div class="teaser__button col col-sm-4of12 col-md-3of12 col-lg-3of12 col-xl-3of12 col-xxl-3of12 text-center">
-        <a class="btn" href="<?php echo $button['url'];?>"><?php echo $button['title'];?></a>
-      </div>
-      <!-- .teaser__button.col.col-md-10of12.col-lg-8of12.col-xl-8of12.col-xxl-8of12 -->
-
-      <?php endif; ?>
-
-    </div><!-- .row.teaser__wrapper -->
-
-    <div class="teaser__body row">
-
-    <?php if( $columns ) : ?>
-
-      <?php foreach( $columns as $column ) : ?>
-        <div class="teaser__col col col-md-6of12 col-lg-4of12 col-xl-4of12 col-xxl-4of12">
-
-        <?php if( $column['icon'] ) : ?>
-          <div class="teaser__col__icon">
-            <svg class="icon <?php echo $column['icon']; ?>">
-              <use xlink:href="#<?php echo $column['icon']; ?>"></use>
-            </svg>
+        <?php if( $images[1] ) : ?>
+          <div class="feature">
+            <?php echo ll_format_image($images[1]['image']); ?>
           </div>
         <?php endif; ?>
 
-        <?php if( $column['title'] ) : ?>
-          <h4 class="teaser__col__title"><?php echo $column['title']; ?></h4>
-          <!-- .teaser__col__title -->
-        <?php endif; ?>
+      <?php endif; ?>
 
-        <?php if( $column['caption'] ) : ?>
-          <div class="teaser__col__caption">
-          <?php echo format_text($column['caption']); ?>
-          </div><!-- .teaser__col__caption -->
-        <?php endif; ?>
+        </div><!-- .teaser__description -->
 
-        </div>
-      <?php endforeach; ?>
-
-    <?php endif; ?>
-
-    </div><!-- .teaser__body.col.col-md-10of12.col-lg-10of12.col-xl-10of12.col-xxl-10of12 -->
+    </div><!-- .row.teaser__wrapper -->
 
   </div><!-- .container -->
 

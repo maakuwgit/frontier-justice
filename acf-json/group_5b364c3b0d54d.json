@@ -421,14 +421,14 @@
                 },
                 "5b57d2f98f4f9": {
                     "key": "5b57d2f98f4f9",
-                    "name": "timeline",
-                    "label": "Timeline",
+                    "name": "teaser",
+                    "label": "Teaser",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5b57d2f98f4fa",
-                            "label": "Timeline",
-                            "name": "timeline",
+                            "label": "Teaser",
+                            "name": "teaser",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -439,7 +439,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5b57cc9112cdc"
+                                "group_5b4e48b2683ad"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -500,5 +500,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1533846518
+    "modified": 1534181971
 }
