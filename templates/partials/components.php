@@ -25,12 +25,13 @@ if( have_rows( 'components' ) ) {
         );
       break;
       case 'call-to-action':
+
         $cta = array(
           'supertitle'  => get_sub_field('cta_supertitle'),
           'heading'     => get_sub_field('cta_heading'),
           'content'     => get_sub_field('cta_content'),
           'links'       => get_sub_field('cta_links'),
-          'image'       => get_sub_field('cta_image'),
+          'image'       => get_sub_field('cta_background'),
           'overlay'     => get_sub_field('cta_overlay_strength')
         );
 

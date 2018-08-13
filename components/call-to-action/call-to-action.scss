@@ -7,10 +7,42 @@
  */
 
 .ll-call-to-action {
+  position: relative;
   background-color: $smoke;
   @extend %section-padding;
-  @include ragged-after('w');
-  @include ragged-before('w');
+
+  body:not(.page-template-template-home) & {
+    @include ragged-after();
+
+    .call-to-action__supertitle {
+      @extend %h6;
+    }
+
+    .call-to-action__heading {
+      @extend %h1;
+    }
+
+  }
+
+  body.page-template-template-home & {
+    @include ragged-after('s');
+
+    .call-to-action__content,
+    .call-to-action__heading,
+    .call-to-action__supertitle {
+      min-width: 70%;
+    }
+
+    .call-to-action__supertitle {
+      @extend %h1;
+      margin-bottom: rem-calc(42);
+    }
+
+    .call-to-action__heading {
+      @extend %h0;
+    }
+
+  }
 
   .container {
     padding-top: $padding-medium;
@@ -38,15 +70,8 @@
 
   }
 
-  .call-to-action__supertitle {
-    @extend %h6;
-  }
-
-  .call-to-action__heading {
-    @extend %h1;
-  }
-
   .call-to-action__button {
+    @extend %open-sans;
     min-width: rem-calc(254);
     box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
     margin-top: rem-calc(30);

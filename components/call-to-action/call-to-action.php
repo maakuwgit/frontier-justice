@@ -43,6 +43,7 @@ $id = $component_args['id'];
 /**
  * ACF values pulled into the component from the components.php partial.
  */
+
 $supertitle      = $component_data['supertitle'];
 $heading         = $component_data['heading'];
 $content         = $component_data['content'];
