@@ -8,7 +8,7 @@
 
 .ll-hero {
   position: relative;
-  min-height: 320px;
+  min-height: rem-calc(320);
   height: 42vh;
   flex-direction: column;
   overflow: hidden;

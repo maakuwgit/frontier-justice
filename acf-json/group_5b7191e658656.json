@@ -1,12 +1,12 @@
 {
-    "key": "group_5b2409ce70d4f",
+    "key": "group_5b7191e658656",
     "title": "Hero",
     "fields": [
         {
-            "key": "field_5b6ae714a6ac5",
-            "label": "Supertitle",
-            "name": "hero_supertitle",
-            "type": "group",
+            "key": "field_5b719eb77559d",
+            "label": "Use an Image for the Heading?",
+            "name": "use_heading_image",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,97 +15,28 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5b6ae714a6ac6",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "80",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 4,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5b6ae714a6ac7",
-                    "label": "Tag",
-                    "name": "tag",
-                    "type": "button_group",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "h1": "H1",
-                        "h2": "H2"
-                    },
-                    "allow_null": 0,
-                    "default_value": "h1",
-                    "layout": "horizontal",
-                    "return_format": "value"
-                },
-                {
-                    "key": "field_5b6ae758a6ac8",
-                    "label": "Price",
-                    "name": "price",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b6b57dab77e0",
-                    "label": "Suffix",
-                    "name": "suffix",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "\/hr",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
-            "key": "field_5b240b1db71bf",
+            "key": "field_5b7191e65f98e",
             "label": "Heading",
             "name": "hero_heading",
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b719eb77559d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -114,7 +45,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b240b1db71c0",
+                    "key": "field_5b7191e66cd69",
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
@@ -133,7 +64,7 @@
                     "new_lines": "br"
                 },
                 {
-                    "key": "field_5b240b1db71c1",
+                    "key": "field_5b7191e66cdb8",
                     "label": "Tag",
                     "name": "tag",
                     "type": "button_group",
@@ -157,26 +88,39 @@
             ]
         },
         {
-            "key": "field_5b6ae3d7eee58",
-            "label": "Content",
-            "name": "hero_content",
-            "type": "textarea",
+            "key": "field_5b719ef57559e",
+            "label": "Headline Image",
+            "name": "hero_heading_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b719eb77559d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 3,
-            "new_lines": "br"
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_5b6ae84f27d46",
+            "key": "field_5b7191e65fa31",
             "label": "Button",
             "name": "hero_button",
             "type": "group",
@@ -191,7 +135,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5b6ae87827d47",
+                    "key": "field_5b7191e67561f",
                     "label": "Type",
                     "name": "type",
                     "type": "clone",
@@ -212,7 +156,7 @@
                     "prefix_name": 0
                 },
                 {
-                    "key": "field_5b6bc4c2408ce",
+                    "key": "field_5b7191e6756ee",
                     "label": "Icon",
                     "name": "icon",
                     "type": "clone",
@@ -233,7 +177,7 @@
                     "prefix_name": 0
                 },
                 {
-                    "key": "field_5b6aea1506d0d",
+                    "key": "field_5b7191e675775",
                     "label": "Link",
                     "name": "link",
                     "type": "link",
@@ -250,7 +194,7 @@
             ]
         },
         {
-            "key": "field_5b240b6ab71c5",
+            "key": "field_5b7191e65fa82",
             "label": "Image",
             "name": "hero_image",
             "type": "image",
@@ -274,7 +218,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_5b250ea4c5a3c",
+            "key": "field_5b7191e65fad2",
             "label": "Overlay",
             "name": "overlay_strength",
             "type": "number",
@@ -295,7 +239,7 @@
             "step": "0.1"
         },
         {
-            "key": "field_5b240b90b71c6",
+            "key": "field_5b7191e65fb22",
             "label": "Looping Video",
             "name": "hero_video",
             "type": "url",
@@ -314,13 +258,8 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
                 "value": "templates\/template-home.php"
             }
         ]
@@ -335,6 +274,6 @@
         "featured_image"
     ],
     "active": 1,
-    "description": "100vw, 85vh <DIV> with the following options. The background image is styled to have an overlay tint, which can be controlled through the component.",
-    "modified": 1534172802
+    "description": "The Homepage Hero. Fewer options and the ability to use an image for an H1",
+    "modified": 1534173198
 }

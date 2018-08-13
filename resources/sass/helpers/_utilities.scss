@@ -66,19 +66,18 @@
 }
 
 %icon-link {
-  font-size: rem-calc(14);
-  font-weight: $text-black;
-  line-height: 18px;
-  line-height: 1.28571428571429;
-  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: rem-calc(16);
+  font-weight: $text-book;
+  line-height: line-calc(24,16);
 
   svg {
-    width: rem-calc(34);
-    height: rem-calc(34);
+    width: rem-calc(51);
+    height: rem-calc(51);
     fill: white;
-    margin-right: rem-calc(10);
-    border-radius: 200px;
-    background-color: rgba($white, 0.5);
+    margin-left: rem-calc(38);
   }
 }
 
