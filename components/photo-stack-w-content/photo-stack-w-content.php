@@ -53,46 +53,83 @@ $images      = $component_data['images'];
 <?php if ( ll_empty( $component_data ) ) return; ?>
 <section class="ll-photo-stack-w-content<?php echo implode( " ", $classes ); ?>"<?php echo $id; ?> data-component="photo-stack-w-content">
 
-  <div class="container row between flex-start">
+  <div class="container">
 
-    <?php if( $heading ) : ?>
+    <div class="row between flex-start">
 
-      <?php if( $heading['tag'] ) : ?>
-    <<?php echo $heading['tag']; ?> class="photo-stack-w-content__headline text-right"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
+  <?php if( $heading ) : ?>
+
+    <?php if( $heading['tag'] ) : ?>
+    <<?php echo $heading['tag']; ?> class="photo-stack-w-content__headline col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
     <!-- .photo-stack-w-content__headline -->
-      <?php endif; ?>
-
     <?php endif; ?>
 
-    <?php if( $subheading ) : ?>
+  <?php endif; ?>
 
-      <?php if( $subheading['tag'] ) : ?>
-    <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
+  <?php if( $subheading ) : ?>
+
+    <?php if( $subheading['tag'] ) : ?>
+    <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
     <!-- .photo-stack-w-content__subheadline -->
-      <?php endif; ?>
-
     <?php endif; ?>
 
-  </div>
+  <?php endif; ?>
 
-  <div class="container row">
+    </div>
+    <!-- .row.between.flex-start -->
 
-    <?php if( $content ) : ?>
+    <div class="row">
 
-      <div class="photo-stack-w-content__photo0 col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
-      <?php echo $content; ?>
+  <?php if( $content ) : ?>
+
+      <div class="photo-stack-w-content__description col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <?php echo format_text( $content ); ?>
       </div><!-- .photo-stack-w-content__description -->
 
-    <?php endif; ?>
+  <?php endif; ?>
 
-    <?php if( $button ) : ?>
+  <?php if( $button ) : ?>
 
-      <nav class="photo-stack-w-content__button col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
-        <a class="btn" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
+      <nav class="photo-stack-w-content__button col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12">
+        <a class="btn--ebony" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
       </nav><!-- .photo-stack-w-content__button -->
 
     <?php endif; ?>
 
   </div>
+    <!-- .row -->
+
+
+    <div class="photo-stack-w-content__images row stretch between">
+
+<?php if( $images ) : ?>
+
+  <?php foreach( $images as $key => $image ) : ?>
+
+      <figure class="photo-stack-w-content__image<?php echo $key; ?>" data-backgrounder>
+
+        <div class="feature">
+          <?php echo ll_format_image($image['image']); ?>
+        </div>
+
+      </figure>
+
+  <?php endforeach; ?>
+
+<?php endif; ?>
+
+<?php if ($caption ) : ?>
+
+      <div class="photo-stack-w-content__caption">
+        <?php echo format_text($caption); ?>
+      </div>
+
+<?php endif; ?>
+
+    </div>
+    <!-- .row.stretch.between -->
+
+  </div>
+  <!-- .container -->
 
 </section>

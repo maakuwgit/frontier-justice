@@ -80,6 +80,18 @@
   }
 }
 
+%btn--ebony {
+  @extend %btn;
+  border-color: $ebony;
+  background-color: $ebony;
+
+  &:hover, &:active, &:focus {
+    color: $ebony;
+    border-color: $ivory;
+    background-color: $ivory;
+  }
+}
+
 %btn--grey {
   @extend %btn;
   border-color: $grey;
@@ -127,6 +139,10 @@ button {
 
 .btn--smoke {
   @extend %btn--smoke;
+}
+
+.btn--ebony {
+  @extend %btn--ebony;
 }
 
 .btn--grey {
