@@ -102,14 +102,15 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'image-slider' :
+      case 'card-slider' :
         //All buses
         $slides = array(
-          'slides'      => get_sub_field('image_slider_slides')
+          'heading'     => get_sub_field('card_slider_heading'),
+          'slides'      => get_sub_field('card_slider_slides')
         );
 
         $components .= ll_include_component(
-          'image-slider',
+          'card-slider',
           $slides,
           array(),
           true
@@ -253,16 +254,15 @@ if( have_rows( 'components' ) ) {
           true
         );
       break;
-      case 'two-col-w-heading' :
+      case 'two-col' :
         //Home, About, all Locations
         $blocks = array(
-          'title'     => get_sub_field('two_col_heading_title'),
-          'l_content' => get_sub_field('two_col_heading_l_content'),
-          'r_content' => get_sub_field('two_col_heading_r_content')
+          'l_content' => get_sub_field('two_col_left_content'),
+          'r_content' => get_sub_field('two_col_right_content')
         );
 
         $components .= ll_include_component(
-          'two-col-w-heading',
+          'two-col',
           $blocks,
           array(),
           true

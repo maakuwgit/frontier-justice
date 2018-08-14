@@ -18,14 +18,14 @@
             "layouts": {
                 "5b43b94334b41": {
                     "key": "5b43b94334b41",
-                    "name": "two-col-w-heading",
-                    "label": "2 Column w\/ Heading",
+                    "name": "two-col",
+                    "label": "2 Column",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5b43b94334b42",
-                            "label": "2 Column w\/ Heading",
-                            "name": "two-col-w-heading",
+                            "label": "2 Column",
+                            "name": "two-col",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -39,7 +39,7 @@
                                 "group_5b4e51358605d"
                             ],
                             "display": "seamless",
-                            "layout": "",
+                            "layout": "block",
                             "prefix_label": 0,
                             "prefix_name": 0
                         }
@@ -173,12 +173,43 @@
                 },
                 "5b6ca3daddbd7": {
                     "key": "5b6ca3daddbd7",
+                    "name": "card-slider",
+                    "label": "Card Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5b6ca3daddbd8",
+                            "label": "Card Slider",
+                            "name": "image-slider",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5b72f43029982"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5b72f5b6eebf5": {
+                    "key": "5b72f5b6eebf5",
                     "name": "inline-form",
                     "label": "Inline Form",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b6ca3daddbd8",
+                            "key": "field_5b72f5b6eebf6",
                             "label": "Inline Form",
                             "name": "inline-form",
                             "type": "clone",
@@ -531,5 +562,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1534194955
+    "modified": 1534266229
 }

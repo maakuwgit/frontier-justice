@@ -7,9 +7,10 @@
  */
 
 .ll-photo-stack-w-content {
-
+  position: relative;
   @extend %section-padding;
-  @include ragged-before();
+  @include ragged-before('w',true);
+  @include ragged-after('w',true);
   background-color: $white;
 
   .photo-stack-w-content__coin {
@@ -23,6 +24,7 @@
     @extend %h0;
     position: relative;
     z-index: 1;
+    margin-top: 0;
     color: $smoke;
     letter-spacing: rem-calc(4.51);
     line-height: line-calc(60,47);
@@ -88,6 +90,10 @@
 
     h2, h3, h4, h5, h6, p, ol, ul, dl {
       margin-top: $padding-medium;
+    }
+
+    p, li, dd {
+      color: $aluminum;
     }
 
     >:nth-child(even) {
@@ -207,6 +213,7 @@
     }
 
     .photo-stack-w-content__description {
+      margin-left: auto;
       order: 2;
     }
 

@@ -1,0 +1,135 @@
+/**
+ * two-col Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.ll-two-col {
+  background-color: $battleship;
+  @extend %section-padding;
+
+  .two-col__left__content,
+  .two-col__right__content,
+  .two-col__left__image {
+    color: $white;
+
+    p, li, dd {
+      color: inherit;
+    }
+
+  }
+
+  .two-col__heading {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: rem-calc(22);
+  }
+
+  .two-col__header {
+    font-size: rem-calc(24);
+    line-height: 33px;
+    line-height: 1.4;
+  }
+
+  .two-col__left__image,
+  .two-col__right__image {
+
+    img {
+      width: 100%;
+      box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
+    }
+
+  }
+
+  .two-col__left__image {
+    position: relative;
+    margin-top: $padding-medium * 3;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background-color: rgba($black, 0.1);
+    }
+
+    figcaption {
+      position: absolute;
+      z-index: 1;
+      top: -6.875vh;
+      right: -6.875vw;
+      width: 60%;
+      text-align: right;
+    }
+
+  }
+
+  .two-col__right__content {
+
+    h2,h3,h4,h5,h6 {
+      margin-top: rem-calc(60);
+      margin-bottom: rem-calc(25);
+    }
+
+    .btn {
+      min-width: rem-calc(254);
+      margin-top: $padding-medium * 0.75;
+      @extend %open-sans;
+      box-shadow: 0 #{rem-calc(10)} #{rem-calc(14)} 0 rgba($black, 0.6);
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .two-col__left__content,
+    .two-col__right__content,
+    .two-col__left__image {
+      max-width: 83.33333334%;
+    }
+
+    .two-col__left__content,
+    .two-col__left__image {
+      text-align: right;
+    }
+
+    .two-col__left__content {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .two-col__left__image {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .two-col__right__image {
+      height: 66.6666667vh;
+      min-height: rem-calc(585);
+    }
+
+    .two-col-w-heading__header {
+      font-size: rem-calc(35);
+      line-height: 49px;
+    }
+
+    .two-col__block {
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        margin-top: -15vh;
+        padding-right: 0;
+      }
+
+    }
+
+  }
+
+}

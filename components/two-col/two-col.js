@@ -1,14 +1,14 @@
 /**
-* two-col-w-heading JS
+* two-col JS
 * -----------------------------------------------------------------------------
 *
-* All the JS for the two-col-w-heading component.
+* All the JS for the two-col component.
 */
 ( function( app ) {
 
   var COMPONENT = {
 
-    className: 'll-two-col-w-heading',
+    className: 'll-two-col',
 
 
     selector : function() {
@@ -31,5 +31,5 @@
   };
 
   // Hooks the component into the app
-  app.registerComponent( 'two-col-w-heading', COMPONENT );
+  app.registerComponent( 'two-col', COMPONENT );
 } )( app );

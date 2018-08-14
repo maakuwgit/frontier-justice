@@ -24,15 +24,16 @@
 
   .teaser__subheadline {
     padding-top: $padding-medium * 0.75;
-    font-weight: $text-book;
   }
 
   h2.teaser__subheadline {
     @extend %h4;
+    font-weight: $text-book;
   }
 
   h3.teaser__subheadline {
     @extend %h5;
+    font-weight: $text-book;
   }
 
   .teaser__image0 {

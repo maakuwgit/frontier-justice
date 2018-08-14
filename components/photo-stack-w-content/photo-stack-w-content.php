@@ -55,7 +55,7 @@ $images      = $component_data['images'];
 
   <div class="container">
 
-    <div class="row between flex-start">
+    <div class="row between start">
 
       <figure class="photo-stack-w-content__coin" data-backgrounder>
 
@@ -76,9 +76,28 @@ $images      = $component_data['images'];
 
   <?php if( $subheading ) : ?>
 
-    <?php if( $subheading['tag'] ) : ?>
+    <?php if( $content && !$button ) : ?>
+
+    <div class="col col-md-6of12 col-lg-6of12 col-xl-6of12">
+
+      <?php if( $subheading['tag'] ) : ?>
+    <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
+    <!-- .photo-stack-w-content__subheadline -->
+      <?php endif; ?>
+
+      <div class="photo-stack-w-content__description">
+      <?php echo format_text( $content ); ?>
+      </div><!-- .photo-stack-w-content__description -->
+
+    </div>
+
+    <?php else: ?>
+
+      <?php if( $subheading['tag'] ) : ?>
     <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline col col-md-6of12 col-lg-6of12 col-xl-6of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
     <!-- .photo-stack-w-content__subheadline -->
+      <?php endif; ?>
+
     <?php endif; ?>
 
   <?php endif; ?>
@@ -88,7 +107,7 @@ $images      = $component_data['images'];
 
     <div class="row">
 
-  <?php if( $content ) : ?>
+  <?php if( $content && $button ) : ?>
 
       <div class="photo-stack-w-content__description col col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo format_text( $content ); ?>
