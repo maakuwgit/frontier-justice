@@ -57,10 +57,18 @@ $images      = $component_data['images'];
 
     <div class="row between flex-start">
 
+      <figure class="photo-stack-w-content__coin" data-backgrounder>
+
+        <div class="feature">
+          <?php echo ll_format_image($images[0]['image']); ?>
+        </div>
+
+      </figure>
+
   <?php if( $heading ) : ?>
 
     <?php if( $heading['tag'] ) : ?>
-    <<?php echo $heading['tag']; ?> class="photo-stack-w-content__headline col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
+    <<?php echo $heading['tag']; ?> class="photo-stack-w-content__headline col col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12"><?php echo $heading['text']; ?></<?php echo $heading['tag']; ?>>
     <!-- .photo-stack-w-content__headline -->
     <?php endif; ?>
 
@@ -69,7 +77,7 @@ $images      = $component_data['images'];
   <?php if( $subheading ) : ?>
 
     <?php if( $subheading['tag'] ) : ?>
-    <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
+    <<?php echo $subheading['tag']; ?> class="photo-stack-w-content__subheadline col col-md-6of12 col-lg-6of12 col-xl-6of12"><?php echo $subheading['text']; ?></<?php echo $subheading['tag']; ?>>
     <!-- .photo-stack-w-content__subheadline -->
     <?php endif; ?>
 
@@ -82,7 +90,7 @@ $images      = $component_data['images'];
 
   <?php if( $content ) : ?>
 
-      <div class="photo-stack-w-content__description col col-sm-8of12 col-md-6of12 col-lg-6of12 col-xl-6of12">
+      <div class="photo-stack-w-content__description col col-md-6of12 col-lg-6of12 col-xl-6of12">
       <?php echo format_text( $content ); ?>
       </div><!-- .photo-stack-w-content__description -->
 
@@ -90,7 +98,7 @@ $images      = $component_data['images'];
 
   <?php if( $button ) : ?>
 
-      <nav class="photo-stack-w-content__button col col-sm-8of12 col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12">
+      <nav class="photo-stack-w-content__button col col-offset-md-1of12 col-md-5of12 col-offset-lg-1of12 col-lg-5of12 col-offset-xl-1of12 col-xl-5of12">
         <a class="btn--ebony" href="<?php echo $button['url']; ?>"><?php echo $button['title']; ?></a>
       </nav><!-- .photo-stack-w-content__button -->
 
