@@ -3,23 +3,11 @@
 ?>
 <header class="navbar top" role="banner">
   <div class="navbar__topbar">
-    <nav class="navbar__topbar__nav container row end centered">
-
-      <form class="navbar__topbar__search iflex" role="search" method="get" id="search" action="<?php echo home_url(); ?>" data-component="search-form">
-        <input type="text" value="" name="s" id="s" placeholder="Search">
-        <label>
-          <svg class="icon icon-search">
-            <use xlink:href="#icon-search"></use>
-          </svg>
-        </label>
-      </form>
-
-      <?php if( $phone ) : ?>
-        <a class="navbar__topbar__phone iflex" href="tel:+1<?php echo $phone; ?>"><?php echo format_phone($phone, false, '.'); ?></a>
-      <?php endif; ?>
+    <nav class="navbar__topbar__nav container row between centered">
+      <a class="icon-link" href="#">Join the tribe & receive member perks!</a>
     </nav>
   </div>
-  <div class="navbar-header container">
+  <div class="navbar-header container row between centered">
 
     <?php $logo = get_field( 'global_logo', 'option' ); ?>
 
