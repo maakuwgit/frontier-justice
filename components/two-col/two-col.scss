@@ -62,7 +62,7 @@
       z-index: 1;
       top: -6.875vh;
       right: -6.875vw;
-      width: 60%;
+      width: calc(100% + 6.875vw);
       text-align: right;
     }
 
@@ -88,7 +88,8 @@
 
     .two-col__left__content,
     .two-col__right__content,
-    .two-col__left__image {
+    .two-col__left__image,
+    .two-col__right__image {
       max-width: 83.33333334%;
     }
 
@@ -97,7 +98,8 @@
       text-align: right;
     }
 
-    .two-col__left__content {
+    .two-col__left__content,
+    .two-col__right__image {
       margin-left: auto;
       margin-right: 0;
     }

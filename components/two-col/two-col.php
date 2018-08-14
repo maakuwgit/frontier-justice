@@ -81,7 +81,7 @@ $r_content    = $component_data['r_content'];
     </div>
     <!-- .two-col__block -->
 
-    <div class="two-col__block col col-md-6of12 col-offset-lg-1of12 col-lg-5of12 col-xl-5of12">
+    <div class="two-col__block col col-md-6of12 col-lg-6of12 col-xl-6of12">
 
     <?php if( $r_content ) : ?>
 

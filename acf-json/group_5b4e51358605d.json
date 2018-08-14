@@ -56,7 +56,7 @@
                     "key": "field_5b730a78984e3",
                     "label": "Title",
                     "name": "title",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -67,9 +67,9 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_5b730a95984e6",
@@ -205,5 +205,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "Two columns with text blocks and a headline above them aligned to the top of their boxes. A toggle switches the side of the image and the content",
-    "modified": 1534266449
+    "modified": 1534275980
 }
