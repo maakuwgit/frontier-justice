@@ -4,7 +4,37 @@
 <header class="navbar top" role="banner">
   <div class="navbar__topbar">
     <nav class="navbar__topbar__nav container row between centered">
-      <a class="icon-link" href="#">Join the tribe & receive member perks!</a>
+      <a href="#">Join the tribe &amp; receive member perks! <span class="coin">GO</span></a>
+
+      <?php if (has_nav_menu('secondary_navigation')) : ?>
+        <?php
+        if ( has_nav_menu('secondary_navigation') ) {
+          wp_nav_menu( array(
+            'theme_location'  => 'secondary_navigation',
+            'menu_class'      => 'nav navbar-nav'
+          ) );
+        }
+        ?>
+      <?php endif; ?>
+
+      <?php if (is_active_sidebar('sidebar-primary')) : ?>
+      <button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#sidebar-nav">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="navbar-toggle__box">
+          <span class="navbar-toggle__inner"></span>
+        </span><!-- .navbar-toggle__box -->
+
+      </button><!-- .navbar-toggle -->
+
+      <div class="sidebar-nav" id="sidebar-nav" role="navigation">
+
+        <?php dynamic_sidebar('sidebar-primary'); ?>
+
+      </div><!-- .secondary-nav -->
+
+      <?php endif; ?>
+
     </nav>
   </div>
   <div class="navbar-header container row between centered">
@@ -25,27 +55,6 @@
 
     <?php endif; ?>
 
-    <?php if (has_nav_menu('secondary_navigation')) : ?>
-
-    <div class="secondary-nav" id="secondary-nav" role="navigation">
-
-      <div class="container row">
-
-        <?php
-        wp_nav_menu( array(
-          'theme_location' => 'secondary_navigation',
-          'menu_class'     => 'nav navbar-nav col col-sm-9of12 col-md-9of12 col-lg-9of12 col-xl-9of12'
-        ));
-        ?>
-
-        <?php echo get_sidebar(); ?>
-
-      </div><!-- .container -->
-
-    </div><!-- .secondary-nav -->
-
-    <?php endif; ?>
-
     <?php if (has_nav_menu('primary_navigation')) : ?>
     <nav class="primary-nav flex" id="primary-nav" role="navigation">
       <?php
@@ -58,6 +67,12 @@
       ?>
     </nav><!-- .primary-nav -->
     <?php endif; ?>
+    <?php
+      //$date = get_date();
+      $openings = get_field('schema_openings','option');
+    ?>
+
+    <time class="text-small">We're Open Today 10:00am &ndash; 8:00pm</time>
 
     <?php if (has_nav_menu('primary_navigation')) : ?>
     <button type="button" class="navbar-toggle navbar-toggle--stand" data-nav="collapse" data-target="#primary-nav">

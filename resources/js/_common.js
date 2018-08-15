@@ -102,8 +102,8 @@
         var target = $(this).data('target');
         $(this).toggleClass('open');
         $('body').toggleClass('locked');
-        // $(target).toggleClass('collapsed');
-        $(target).slideToggle();
+        $(target).toggleClass('active');
+        //$(target).slideToggle();
       });
 
       /*

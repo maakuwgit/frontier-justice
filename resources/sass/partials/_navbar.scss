@@ -22,7 +22,7 @@
     &.top .navbar-toggle__inner::before,
     .navbar-toggle__inner::after,
     &.top .navbar-toggle__inner::after {
-      background-color: $gold;
+      background-color: $white;
     }
 
   }
@@ -71,6 +71,7 @@
   .logo__brand {
     width: rem-calc(40);
     height: rem-calc(40);
+    margin-right: $padding-medium;
     fill: $battleship;
     color: $battleship;
 
@@ -125,13 +126,27 @@
 }
 
 .navbar__topbar {
-  min-height: rem-calc(35);
   width: 100%;
+  z-index: 10;
   font-size: rem-calc(14);
   font-weight: $text-book;
   color: $white;
   background-color: $black;
   line-height: line-calc(18,14);
+
+  .coin {
+    @extend %open-sans;
+    display: inline-flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    min-width: rem-calc(40);
+    margin-bottom: auto;
+    margin-left: rem-calc(8);
+    padding: rem-calc(2);
+    border-radius: 200px;
+    background-color: $aluminum;
+  }
 }
 
 .navbar-header {
@@ -164,7 +179,9 @@
   overflow: visible;
 
   @include screen-md-up {
-    display: none;
+    .navbar-header & {
+      display: none;
+    }
   }
 
   .navbar.top &:hover,
@@ -173,7 +190,7 @@
   &.open:hover,
   &:hover,
   &:focus {
-    border-color: $gold;
+    border-color: $white;
     background-color: transparent;
   }
 
@@ -186,7 +203,7 @@
 
       &:before,
       &:after {
-        background-color: $gold;
+        background-color: $white;
       }
 
     }
@@ -197,7 +214,7 @@
   &:hover {
 
     .navbar-toggle__inner {
-      background-color: $gold;
+      background-color: $white;
     }
 
   }
@@ -222,8 +239,8 @@
 
       &::before,
       &::after {
-        width: 42px;
-        height: 4px;
+        width: 22px;
+        height: 2px;
         background-color: $white;
       }
 
@@ -235,7 +252,7 @@
       }
 
       &::after {
-        bottom: 0;
+        bottom: 2px;
         transform: rotate(45deg);
         transition: bottom 0.1s 0.12s ease-out,
         transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -248,8 +265,8 @@
 }
 
 .navbar-toggle__box {
-  width: 33px;
-  height: calc(3px * 3 + 9px * 2);
+  width: 23px;
+  height: calc(2px * 3 + 6px * 2);
   display: inline-block;
   position: relative;
 }
@@ -257,15 +274,15 @@
 .navbar-toggle__inner {
   display: block;
   top: 50%;
-  margin-top: calc(3px / -2);
+  margin-top: calc(2px / -2);
   transition: transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
               background-color 0s 0.1s linear;
 
   &,
   &::before,
   &::after {
-    width: 33px;
-    height: 3px;
+    width: 23px;
+    height: 2px;
     background-color: $smoke;
     border-radius: 0;
     position: absolute;
@@ -288,13 +305,14 @@
   }
 
   &::before {
-    top: calc( 12px * -1);
+    top: calc( 8px * -1);
     transition: top 0.1s 0.1s ease-in,
     transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
 
   &::after {
-    bottom: calc( 12px * -1);
+    width: 16px;
+    bottom: calc( 8px * -1);
     transition: bottom 0.1s 0.1s ease-in,
     transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
@@ -312,14 +330,14 @@ body.locked {
 }
 
 .dropdown-toggle.collapsed {
-  background-color: white;
+  background-color: $white;
   box-shadow: 0 #{rem-calc(20)} #{rem-calc(10)} rgba($black, 0.1);
 }
 
 #primary-nav {
   z-index: 1;
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: 0;
+  margin-right: auto;
 
   @include screen-md {
     position: fixed;
@@ -381,7 +399,15 @@ body.locked {
 
   .dropdown-menu {
 
-    @include screen-md-up {
+    &.collapsed {
+      display: none;
+    }
+
+  }
+
+  @include screen-md-up {
+
+    .dropdown-menu {
       position: absolute;
       left: 0;
       right: 0;
@@ -435,9 +461,56 @@ body.locked {
 
     }
 
-    &.collapsed {
-      display: none;
-    }
+  }
+}
 
+#sidebar-nav {
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  bottom: 0;
+  display: flex;
+  width: 50vw;
+  background-color: rgba($black, 0.95);
+  transition: right 150ms ease-in;
+
+  &.active {
+    right: 0;
+    transition: right 300ms ease-out;
+  }
+}
+
+#menu-secondary-navigation {
+  z-index: 1;
+  margin-right: 0;
+
+  .menu-item {
+    a {
+      min-height: initial;
+      padding-top: rem-calc(12);
+      padding-bottom: rem-calc(12);
+      color: $white;
+    }
+  }
+}
+
+#menu-sidebar {
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: start;
+  padding-left: $padding-large;
+
+  .menu-item {
+    a {
+      @extend %h6;
+      min-height: initial;
+      padding: #{rem-calc(8)} 0;
+      color: $white;
+
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 }
